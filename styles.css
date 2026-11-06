@@ -1,0 +1,2246 @@
+/* ==========================================================================
+   GRANDE AZUL - E-COMMERCE ESTILO JAPONÊS (和風モダン・ダイビング)
+   Identidade: Minimalismo Oceânico, Tipografia Bilíngue & Rigor Técnico
+   ========================================================================== */
+
+:root {
+  /* Paleta Japonesa Marítima (和の海色) */
+  --color-indigo-dark: #0a192f;     /* 深藍 (Fukiai - Índigo Profundo) */
+  --color-indigo-navy: #0f2c4d;     /* 濃紺 (Nokon - Marinho Intenso) */
+  --color-indigo-marine: #1a4971;   /* 紺碧 (Konpeki - Azul Marinho Royal) */
+  --color-ocean-cyan: #0284c7;      /* 浅葱 (Asagi - Ciano Oceânico) */
+  --color-ocean-light: #e0f2fe;     /* 水色 (Mizuiro - Água Rasa) */
+  --color-ocean-bg: #f4f8fb;        /* 浜辺の砂 (Off-white costeiro) */
+  --color-washi: #fdfdfc;           /* 和紙 (Washi puro) */
+  
+  /* Acentos Tradicionais */
+  --color-hanko-red: #c92a2a;       /* 朱色 (Vermelho Hanko / Carimbo de Autenticidade) */
+  --color-hanko-gold: #c59b27;      /* 金茶 (Ouro fosco marítimo) */
+  --color-sumi: #1e293b;            /* 墨 (Sumi - Tinta preta carvão) */
+  --color-sumi-light: #475569;      /* 灰墨 (Cinza neutro) */
+  --color-sumi-muted: #64748b;      /* 薄墨 (Cinza suave para legendas) */
+  --color-border: #e2e8f0;          /* Linhas finas estruturais */
+  --color-border-dark: #cbd5e1;
+
+  /* Fontes */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-jp: 'Noto Sans JP', "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  --font-serif-jp: 'Shippori Mincho', 'Noto Serif JP', "Yu Mincho", serif;
+
+  /* Layout */
+  --header-height: 84px;
+  --container-max: 1280px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 3px rgba(10, 25, 47, 0.06);
+  --shadow-md: 0 4px 12px rgba(10, 25, 47, 0.08);
+  --shadow-lg: 0 12px 28px rgba(10, 25, 47, 0.12);
+  --transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Reset Básico */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-ocean-bg);
+  color: var(--color-sumi);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Padrão Sutil Seigaiha (青海波 - Ondas Tradicionais Japonesas) */
+.bg-seigaiha {
+  background-image: radial-gradient(circle at 100% 150%, var(--color-ocean-bg) 24%, white 25%, white 28%, var(--color-ocean-bg) 29%, var(--color-ocean-bg) 36%, white 36%, white 40%, transparent 40%),
+                    radial-gradient(circle at 0 150%, var(--color-ocean-bg) 24%, white 25%, white 28%, var(--color-ocean-bg) 29%, var(--color-ocean-bg) 36%, white 36%, white 40%, transparent 40%),
+                    radial-gradient(circle at 50% 100%, white 10%, var(--color-ocean-bg) 11%, var(--color-ocean-bg) 23%, white 24%, white 30%, var(--color-ocean-bg) 31%, var(--color-ocean-bg) 43%, white 44%, white 50%, transparent 50%),
+                    radial-gradient(circle at 100% 50%, white 5%, var(--color-ocean-bg) 6%, var(--color-ocean-bg) 15%, white 16%, white 20%, var(--color-ocean-bg) 21%, var(--color-ocean-bg) 30%, white 31%, white 35%, transparent 35%),
+                    radial-gradient(circle at 0 50%, white 5%, var(--color-ocean-bg) 6%, var(--color-ocean-bg) 15%, white 16%, white 20%, var(--color-ocean-bg) 21%, var(--color-ocean-bg) 30%, white 31%, white 35%, transparent 35%);
+  background-size: 80px 40px;
+  background-color: #f7fafc;
+}
+
+/* Container */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Tipografia Japonesa Especial */
+.jp-text {
+  font-family: var(--font-jp);
+  letter-spacing: 0.05em;
+}
+
+.jp-serif {
+  font-family: var(--font-serif-jp);
+}
+
+.jp-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 0.25em;
+  font-family: var(--font-serif-jp);
+}
+
+/* Hanko / Selo Tradicional Japonês (判子) */
+.hanko-stamp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--color-hanko-red);
+  color: var(--color-hanko-red);
+  padding: 2px 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  border-radius: 3px;
+  background-color: rgba(201, 42, 42, 0.04);
+  text-transform: uppercase;
+}
+
+.hanko-seal {
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--color-hanko-red);
+  border-radius: 50%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-hanko-red);
+  font-family: var(--font-serif-jp);
+  font-size: 0.7rem;
+  font-weight: 800;
+  line-height: 1.05;
+  background-color: rgba(201, 42, 42, 0.05);
+  box-shadow: inset 0 0 4px rgba(201, 42, 42, 0.2);
+  transform: rotate(-4deg);
+}
+
+/* ==========================================================================
+   TOP BAR & MARQUEE INFORMATIVO (お知らせ)
+   ========================================================================== */
+.top-announcement-bar {
+  background-color: var(--color-indigo-dark);
+  color: #dbeafe;
+  font-size: 0.8rem;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.top-announcement-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.announcement-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-badge {
+  background-color: var(--color-hanko-red);
+  color: white;
+  padding: 2px 8px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  border-radius: 2px;
+}
+
+.announcement-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.76rem;
+}
+
+.announcement-right a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.announcement-right a:hover {
+  color: white;
+}
+
+/* TAP Toggle Switch no Header */
+.tap-view-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.74rem;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: var(--transition);
+}
+
+.tap-view-toggle:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.toggle-switch-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #94a3b8;
+  display: inline-block;
+  transition: var(--transition);
+}
+
+.tap-view-toggle.active .toggle-switch-indicator {
+  background-color: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+}
+
+/* ==========================================================================
+   HEADER PRINCIPAL & NAVEGAÇÃO
+   ========================================================================== */
+.site-header {
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+  gap: 24px;
+}
+
+/* Logo Brand */
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: var(--color-indigo-dark);
+}
+
+.logo-frame {
+  width: 52px;
+  height: 52px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  border: 1.5px solid var(--color-border);
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(15, 41, 66, 0.08);
+  transition: var(--transition);
+}
+
+.logo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brand-link:hover .logo-frame {
+  border-color: var(--color-indigo-marine);
+  transform: translateY(-1px);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-family: var(--font-serif-jp);
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+  color: var(--color-indigo-dark);
+}
+
+.brand-jp-subtitle {
+  font-family: var(--font-jp);
+  font-size: 0.72rem;
+  color: var(--color-indigo-marine);
+  letter-spacing: 0.16em;
+  font-weight: 500;
+}
+
+/* Nav Menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--color-sumi);
+  font-size: 0.88rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 6px 0;
+  transition: var(--transition);
+}
+
+.nav-link span.jp-sub {
+  font-family: var(--font-jp);
+  font-size: 0.65rem;
+  color: var(--color-sumi-muted);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.nav-link:hover {
+  color: var(--color-indigo-marine);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-indigo-marine);
+  transition: var(--transition);
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Header Actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.search-trigger-btn,
+.consult-trigger-btn,
+.cart-trigger-btn {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  font-size: 0.84rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-sumi);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.search-trigger-btn:hover,
+.consult-trigger-btn:hover {
+  border-color: var(--color-indigo-marine);
+  color: var(--color-indigo-marine);
+  background-color: var(--color-ocean-light);
+}
+
+.consult-trigger-btn {
+  background-color: rgba(2, 132, 199, 0.08);
+  border-color: rgba(2, 132, 199, 0.3);
+  color: var(--color-indigo-dark);
+}
+
+.cart-trigger-btn {
+  background-color: var(--color-indigo-dark);
+  color: white;
+  border-color: var(--color-indigo-dark);
+  position: relative;
+}
+
+.cart-trigger-btn:hover {
+  background-color: var(--color-indigo-marine);
+  border-color: var(--color-indigo-marine);
+}
+
+.cart-badge {
+  background-color: var(--color-hanko-red);
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: var(--color-indigo-dark);
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   HERO SECTION JAPONESA (和風ヒーローエリア)
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  background-color: var(--color-indigo-dark);
+  color: white;
+  overflow: hidden;
+  padding: 60px 0 70px;
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to right, rgba(10, 25, 47, 0.94) 30%, rgba(10, 25, 47, 0.6) 80%, rgba(10, 25, 47, 0.85)),
+                    url('assets/products/hero-bg.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  opacity: 0.45;
+  mix-blend-mode: luminosity;
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: auto 1fr 320px;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Barra Vertical Japonesa */
+.hero-vertical-accent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  padding-right: 24px;
+}
+
+.vertical-kanji-banner {
+  font-family: var(--font-serif-jp);
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 1.05rem;
+  letter-spacing: 0.3em;
+  color: #93c5fd;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.vertical-decor-line {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, #93c5fd, transparent);
+}
+
+/* Conteúdo Principal do Hero */
+.hero-content {
+  max-width: 680px;
+}
+
+.hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #93c5fd;
+  margin-bottom: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 4px 12px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.hero-title {
+  font-family: var(--font-serif-jp);
+  font-size: 2.8rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+
+.hero-title span.highlight-azure {
+  color: #38bdf8;
+  position: relative;
+  display: inline-block;
+}
+
+.hero-description {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin-bottom: 28px;
+  font-weight: 300;
+}
+
+.hero-ctas {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-primary-ocean {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: white;
+  padding: 13px 28px;
+  font-size: 0.94rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.btn-primary-ocean:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(2, 132, 199, 0.5);
+}
+
+.btn-secondary-washi {
+  background-color: transparent;
+  color: #f1f5f9;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 13px 24px;
+  font-size: 0.94rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.btn-secondary-washi:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: white;
+  color: white;
+}
+
+/* Painel Lateral de Métricas do TAP */
+.hero-tap-card {
+  background: rgba(15, 35, 60, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-lg);
+}
+
+.tap-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.tap-badge-title {
+  font-size: 0.76rem;
+  letter-spacing: 0.1em;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.tap-stat-item {
+  margin-bottom: 14px;
+}
+
+.tap-stat-val {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #38bdf8;
+  font-family: var(--font-sans);
+  line-height: 1.1;
+}
+
+.tap-stat-lbl {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  line-height: 1.4;
+}
+
+.tap-cert-badge {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.74rem;
+  color: #cbd5e1;
+}
+
+/* ==========================================================================
+   BANNER DE VANTAGENS & CONFIANÇA JAPONESA (特長・信頼性)
+   ========================================================================== */
+.trust-features-bar {
+  background-color: white;
+  border-bottom: 1px solid var(--color-border);
+  padding: 22px 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 12px;
+  border-right: 1px solid var(--color-border);
+}
+
+.feature-item:last-child {
+  border-right: none;
+}
+
+.feature-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-ocean-light);
+  color: var(--color-indigo-marine);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.feature-text h4 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-indigo-dark);
+  line-height: 1.2;
+}
+
+.feature-text p {
+  font-size: 0.75rem;
+  color: var(--color-sumi-muted);
+}
+
+.feature-text span.jp-sub {
+  font-size: 0.65rem;
+  color: var(--color-indigo-marine);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   SELETOR DE CATEGORIAS (4 CATEGORIAS DO DOCUMENTO TAP)
+   ========================================================================== */
+.catalog-section {
+  padding: 60px 0 90px;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 40px;
+}
+
+.section-jp-kicker {
+  font-family: var(--font-serif-jp);
+  font-size: 0.9rem;
+  color: var(--color-indigo-marine);
+  letter-spacing: 0.2em;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.section-jp-kicker::before,
+.section-jp-kicker::after {
+  content: '—';
+  color: #94a3b8;
+}
+
+.section-title {
+  font-family: var(--font-serif-jp);
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--color-indigo-dark);
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  font-size: 0.94rem;
+  color: var(--color-sumi-light);
+}
+
+/* Barra de Filtros e Busca */
+.catalog-controls {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  margin-bottom: 30px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Abas de Categorias */
+.category-tabs-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.category-tab-btn {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 8px 16px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-sumi);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+.category-tab-btn:hover {
+  background-color: var(--color-ocean-light);
+  border-color: var(--color-indigo-marine);
+  color: var(--color-indigo-marine);
+}
+
+.category-tab-btn.active {
+  background-color: var(--color-indigo-dark);
+  color: white;
+  border-color: var(--color-indigo-dark);
+}
+
+.category-tab-btn .tab-count {
+  font-size: 0.72rem;
+  padding: 2px 6px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.category-tab-btn.active .tab-count {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Linha de Busca e Ordenação */
+.search-sort-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 14px;
+}
+
+.search-input-wrapper {
+  position: relative;
+  flex: 1;
+  max-width: 440px;
+}
+
+.search-input-wrapper i {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 9px 16px 9px 40px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.86rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.search-input:focus {
+  border-color: var(--color-indigo-marine);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+.sort-and-count {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.product-count-label {
+  font-size: 0.82rem;
+  color: var(--color-sumi-muted);
+}
+
+.sort-select {
+  padding: 8px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.84rem;
+  background-color: white;
+  color: var(--color-sumi);
+  outline: none;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   GRID DE PRODUTOS (17 PRODUTOS DO DOCUMENTO TAP)
+   ========================================================================== */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.product-card {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-indigo-marine);
+}
+
+/* Badges no Card */
+.card-badge-container {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.product-badge-jp {
+  background-color: var(--color-indigo-dark);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 2px;
+  letter-spacing: 0.05em;
+  font-family: var(--font-jp);
+}
+
+.product-badge-hanko {
+  background-color: var(--color-hanko-red);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 2px;
+  letter-spacing: 0.04em;
+}
+
+/* Imagem do Produto */
+.product-image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 80%; /* Proporção 5:4 */
+  background-color: #f8fafc;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.product-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+.quick-view-overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: rgba(10, 25, 47, 0.9);
+  color: white;
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  opacity: 0;
+  transition: var(--transition);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.product-card:hover .quick-view-overlay {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Conteúdo do Card */
+.product-content {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.product-sku-cat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: var(--color-sumi-muted);
+  margin-bottom: 6px;
+}
+
+.product-jp-title {
+  font-family: var(--font-jp);
+  font-size: 0.74rem;
+  color: var(--color-indigo-marine);
+  margin-bottom: 4px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.product-title {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--color-indigo-dark);
+  line-height: 1.35;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  min-height: 42px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-title:hover {
+  color: var(--color-ocean-cyan);
+}
+
+.product-specs-snippet {
+  font-size: 0.76rem;
+  color: var(--color-sumi-light);
+  margin-bottom: 14px;
+  line-height: 1.4;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 10px;
+}
+
+/* Preços */
+.product-pricing {
+  margin-top: auto;
+  margin-bottom: 14px;
+}
+
+.price-main {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--color-indigo-dark);
+  line-height: 1.1;
+}
+
+.price-installments {
+  font-size: 0.76rem;
+  color: var(--color-sumi-muted);
+}
+
+.price-pix {
+  font-size: 0.78rem;
+  color: #15803d;
+  font-weight: 600;
+}
+
+/* Caixa de Gestão TAP (Ativada via toggle) */
+.product-tap-meta {
+  display: none;
+  background-color: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  margin-bottom: 12px;
+  font-size: 0.72rem;
+}
+
+body.show-tap-metrics .product-tap-meta {
+  display: block;
+}
+
+.tap-meta-row {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.5;
+}
+
+.tap-meta-margin {
+  font-weight: 700;
+  color: #0369a1;
+}
+
+/* Botões do Card */
+.card-actions {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+.btn-add-cart {
+  background-color: var(--color-indigo-dark);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: var(--transition);
+}
+
+.btn-add-cart:hover {
+  background-color: var(--color-indigo-marine);
+}
+
+.btn-details-quick {
+  background-color: var(--color-ocean-light);
+  color: var(--color-indigo-marine);
+  border: 1px solid rgba(2, 132, 199, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 0.84rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-details-quick:hover {
+  background-color: #bae6fd;
+  border-color: var(--color-ocean-cyan);
+}
+
+/* ==========================================================================
+   SEÇÃO DE GUIA CONSULTIVO & RECOMENDADOR (コンシェルジュ・診断)
+   ========================================================================== */
+.consultative-section {
+  background-color: white;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 70px 0;
+  position: relative;
+}
+
+.consultative-wrapper {
+  background: linear-gradient(135deg, var(--color-indigo-dark) 0%, #0d2847 100%);
+  border-radius: var(--radius-lg);
+  padding: 44px;
+  color: white;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.consultative-pattern {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 40%;
+  background-image: url('assets/products/diver-action.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+  mix-blend-mode: overlay;
+  mask-image: linear-gradient(to left, black, transparent);
+  -webkit-mask-image: linear-gradient(to left, black, transparent);
+}
+
+.consultative-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.consultative-hanko-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.consultative-title {
+  font-family: var(--font-serif-jp);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.consultative-desc {
+  font-size: 0.94rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* Wizard Steps */
+.wizard-box {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.wizard-question-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #93c5fd;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.wizard-options-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.wizard-option-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-sm);
+  color: white;
+  padding: 12px 10px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.wizard-option-btn:hover,
+.wizard-option-btn.selected {
+  background: #0284c7;
+  border-color: #38bdf8;
+  box-shadow: 0 0 12px rgba(2, 132, 199, 0.5);
+}
+
+.wizard-option-btn span.sub {
+  display: block;
+  font-size: 0.68rem;
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
+.wizard-result-box {
+  display: none;
+  background: rgba(2, 132, 199, 0.15);
+  border: 1px solid #38bdf8;
+  border-radius: var(--radius-md);
+  padding: 16px;
+  margin-top: 16px;
+  font-size: 0.86rem;
+}
+
+/* ==========================================================================
+   SEÇÃO INSTITUCIONAL / TERMO DE ABERTURA DO PROJETO (TAP) & EQUIPE
+   ========================================================================== */
+.institutional-tap-section {
+  padding: 80px 0;
+  background-color: var(--color-ocean-bg);
+}
+
+.tap-document-card {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.tap-doc-header {
+  background: var(--color-indigo-dark);
+  color: white;
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.tap-doc-title-box h3 {
+  font-family: var(--font-serif-jp);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+}
+
+.tap-doc-subtitle {
+  font-size: 0.84rem;
+  color: #94a3b8;
+}
+
+.tap-team-chips {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.team-chip {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  color: #f1f5f9;
+}
+
+.tap-doc-body {
+  padding: 36px 40px;
+}
+
+.tap-insights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.insight-box {
+  background: #f8fafc;
+  border-left: 3px solid var(--color-indigo-marine);
+  padding: 18px 20px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.insight-box h4 {
+  font-size: 0.92rem;
+  color: var(--color-indigo-dark);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.insight-box p {
+  font-size: 0.82rem;
+  color: var(--color-sumi-light);
+  line-height: 1.5;
+}
+
+/* Tabela Oficial de Precificação do TAP */
+.tap-pricing-table-container {
+  overflow-x: auto;
+  margin-top: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.tap-pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  text-align: left;
+}
+
+.tap-pricing-table th {
+  background-color: #f1f5f9;
+  color: var(--color-indigo-dark);
+  padding: 12px 14px;
+  font-weight: 700;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.tap-pricing-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-sumi);
+}
+
+.tap-pricing-table tr:nth-child(even) {
+  background-color: #fafbfc;
+}
+
+.tap-pricing-table tr:hover {
+  background-color: #f0f9ff;
+}
+
+.tap-margin-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.76rem;
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+/* Referências Bibliográficas ABNT */
+.abnt-references-card {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 28px 36px;
+}
+
+.abnt-references-card h4 {
+  font-size: 0.96rem;
+  color: var(--color-indigo-dark);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.abnt-list {
+  list-style: none;
+  font-size: 0.78rem;
+  color: var(--color-sumi-light);
+  line-height: 1.6;
+}
+
+.abnt-list li {
+  margin-bottom: 10px;
+  padding-left: 18px;
+  position: relative;
+}
+
+.abnt-list li::before {
+  content: '▪';
+  position: absolute;
+  left: 0;
+  color: var(--color-indigo-marine);
+}
+
+.abnt-list a {
+  color: var(--color-ocean-cyan);
+  text-decoration: none;
+}
+
+.abnt-list a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   FOOTER (JAPANESE CRAFTSMANSHIP / 伝統と革新)
+   ========================================================================== */
+.site-footer {
+  background-color: var(--color-indigo-dark);
+  color: #cbd5e1;
+  padding: 70px 0 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-top-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footer-brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-logo-frame {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  background: white;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.footer-brand-title {
+  font-family: var(--font-serif-jp);
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 700;
+}
+
+.footer-brand-desc {
+  font-size: 0.84rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  max-width: 360px;
+}
+
+.footer-col h4 {
+  font-size: 0.9rem;
+  color: white;
+  margin-bottom: 16px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-col h4 span.jp-sub {
+  font-size: 0.65rem;
+  color: #60a5fa;
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+.footer-links-list {
+  list-style: none;
+}
+
+.footer-links-list li {
+  margin-bottom: 10px;
+}
+
+.footer-links-list a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.82rem;
+  transition: var(--transition);
+}
+
+.footer-links-list a:hover {
+  color: white;
+  padding-left: 4px;
+}
+
+.footer-newsletter-text {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-bottom: 12px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 6px;
+}
+
+.newsletter-input {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 9px 12px;
+  font-size: 0.82rem;
+  color: white;
+  outline: none;
+  flex: 1;
+}
+
+.newsletter-input:focus {
+  border-color: #38bdf8;
+}
+
+.newsletter-btn {
+  background-color: var(--color-ocean-cyan);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 9px 16px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.newsletter-btn:hover {
+  background-color: #0369a1;
+}
+
+.footer-bottom-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.76rem;
+  color: #64748b;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* ==========================================================================
+   DRAWER DO CARRINHO DE COMPRAS (ショッピングカート)
+   ========================================================================== */
+.cart-drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(10, 25, 47, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 200;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+
+.cart-drawer-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: -480px;
+  width: 100%;
+  max-width: 460px;
+  height: 100%;
+  background: white;
+  z-index: 201;
+  box-shadow: -8px 0 24px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cart-drawer.active {
+  right: 0;
+}
+
+.cart-header {
+  padding: 20px 24px;
+  background: var(--color-indigo-dark);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-header-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-header-title h3 {
+  font-family: var(--font-serif-jp);
+  font-size: 1.15rem;
+  letter-spacing: 0.05em;
+}
+
+.cart-close-btn {
+  background: none;
+  border: none;
+  color: #cbd5e1;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 4px;
+  transition: var(--transition);
+}
+
+.cart-close-btn:hover {
+  color: white;
+}
+
+/* Barra de Frete Grátis no Carrinho */
+.free-shipping-progress-box {
+  background-color: #f0f9ff;
+  border-bottom: 1px solid #bae6fd;
+  padding: 12px 24px;
+  font-size: 0.78rem;
+  color: var(--color-indigo-navy);
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 6px;
+  background-color: #e2e8f0;
+  border-radius: 3px;
+  margin-top: 6px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0284c7, #22c55e);
+  width: 0%;
+  transition: width 0.4s ease;
+}
+
+/* Lista de Itens no Carrinho */
+.cart-items-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cart-empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--color-sumi-muted);
+}
+
+.cart-empty-state i {
+  font-size: 3rem;
+  color: #cbd5e1;
+  margin-bottom: 16px;
+}
+
+.cart-item-row {
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  gap: 14px;
+  align-items: center;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.cart-item-img {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  border: 1px solid var(--color-border);
+}
+
+.cart-item-info h4 {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--color-indigo-dark);
+  line-height: 1.3;
+  margin-bottom: 2px;
+}
+
+.cart-item-price {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--color-indigo-marine);
+}
+
+.cart-item-qty-ctrl {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-top: 6px;
+  width: fit-content;
+}
+
+.qty-btn {
+  background: #f8fafc;
+  border: none;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-sumi);
+  transition: var(--transition);
+}
+
+.qty-btn:hover {
+  background-color: #e2e8f0;
+}
+
+.qty-val {
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0 10px;
+}
+
+.cart-item-remove-btn {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 6px;
+  transition: var(--transition);
+}
+
+.cart-item-remove-btn:hover {
+  color: var(--color-hanko-red);
+}
+
+/* Rodapé do Carrinho */
+.cart-footer {
+  padding: 20px 24px;
+  background-color: #f8fafc;
+  border-top: 1px solid var(--color-border);
+}
+
+/* Simulador de Frete no Carrinho */
+.shipping-calc-box {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.shipping-cep-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  outline: none;
+}
+
+.shipping-calc-btn {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.shipping-calc-btn:hover {
+  border-color: var(--color-indigo-marine);
+  color: var(--color-indigo-marine);
+}
+
+.shipping-result-row {
+  display: none;
+  font-size: 0.78rem;
+  color: #15803d;
+  margin-bottom: 12px;
+}
+
+.cart-totals-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.84rem;
+  margin-bottom: 16px;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-sumi-light);
+}
+
+.total-row.final-total {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-indigo-dark);
+  border-top: 1px solid var(--color-border);
+  padding-top: 10px;
+  margin-top: 4px;
+}
+
+.btn-checkout-order {
+  width: 100%;
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+.btn-checkout-order:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+}
+
+/* ==========================================================================
+   MODAL DE DETALHES TÉCNICOS & TABELA DE MEDIDAS (仕様・サイズ表)
+   ========================================================================== */
+.product-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(10, 25, 47, 0.7);
+  backdrop-filter: blur(5px);
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+
+.product-modal-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.product-modal-content {
+  background: white;
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  transform: translateY(20px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-modal-backdrop.active .product-modal-content {
+  transform: translateY(0);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: white;
+  border: 1px solid var(--color-border);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--color-sumi);
+  cursor: pointer;
+  z-index: 10;
+  transition: var(--transition);
+}
+
+.modal-close-btn:hover {
+  background-color: var(--color-hanko-red);
+  color: white;
+  border-color: var(--color-hanko-red);
+}
+
+.modal-scrollable-body {
+  overflow-y: auto;
+  padding: 32px 36px;
+}
+
+.modal-hero-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 28px;
+}
+
+.modal-img-col img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+.modal-info-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-jp-subtitle {
+  font-family: var(--font-jp);
+  font-size: 0.8rem;
+  color: var(--color-indigo-marine);
+  margin-bottom: 4px;
+}
+
+.modal-product-title {
+  font-family: var(--font-serif-jp);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-indigo-dark);
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.modal-price-box {
+  background-color: #f8fafc;
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  margin-bottom: 16px;
+}
+
+.modal-price-val {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--color-indigo-dark);
+}
+
+/* Abas de Informação no Modal (Especificações / Tabela de Medidas / Cuidados) */
+.modal-tabs-nav {
+  display: flex;
+  border-bottom: 2px solid var(--color-border);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.modal-tab-btn {
+  background: none;
+  border: none;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-sumi-muted);
+  cursor: pointer;
+  position: relative;
+  transition: var(--transition);
+}
+
+.modal-tab-btn.active {
+  color: var(--color-indigo-marine);
+}
+
+.modal-tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-indigo-marine);
+}
+
+.modal-tab-panel {
+  display: none;
+}
+
+.modal-tab-panel.active {
+  display: block;
+}
+
+/* Tabela de Especificações */
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+  margin-bottom: 20px;
+}
+
+.specs-table tr {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.specs-table th {
+  text-align: left;
+  padding: 10px 12px;
+  background-color: #f8fafc;
+  color: var(--color-indigo-dark);
+  font-weight: 600;
+  width: 38%;
+}
+
+.specs-table td {
+  padding: 10px 12px;
+  color: var(--color-sumi);
+}
+
+/* Tabela de Medidas Customizada */
+.size-chart-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  margin-top: 10px;
+}
+
+.size-chart-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.size-chart-table th {
+  background: var(--color-indigo-dark);
+  color: white;
+  padding: 10px;
+  font-weight: 600;
+}
+
+.size-chart-table td {
+  padding: 9px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.size-chart-table tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+/* Modal Checkout Sucesso / Nuvemshop */
+.checkout-modal-card {
+  max-width: 600px;
+  padding: 32px;
+  text-align: center;
+}
+
+.checkout-success-icon {
+  width: 64px;
+  height: 64px;
+  background-color: #dcfce7;
+  color: #16a34a;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+/* ==========================================================================
+   BOTÃO FLUTUANTE DE ATENDIMENTO CONSULTIVO (WHATSAPP / CONCIERGE)
+   ========================================================================== */
+.floating-consultant-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 150;
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 0.86rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 6px 20px rgba(22, 163, 74, 0.4);
+  transition: var(--transition);
+}
+
+.floating-consultant-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(22, 163, 74, 0.5);
+  color: white;
+}
+
+.online-pulse-dot {
+  width: 9px;
+  height: 9px;
+  background-color: #4ade80;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(74, 222, 128, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+}
+
+/* Toast Notifications */
+.toast-notification {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--color-indigo-dark);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  z-index: 400;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  transition: var(--transition);
+  pointer-events: none;
+}
+
+.toast-notification.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (MOBILE & TABLETS)
+   ========================================================================== */
+@media (max-width: 1080px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-vertical-accent {
+    display: none;
+  }
+  .hero-ctas {
+    justify-content: center;
+  }
+  .hero-tap-card {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+  .mobile-menu-toggle {
+    display: block;
+  }
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .product-content {
+    padding: 12px;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .feature-item {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 12px;
+  }
+  .tap-insights-grid {
+    grid-template-columns: 1fr;
+  }
+  .modal-hero-split {
+    grid-template-columns: 1fr;
+  }
+  .wizard-options-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+  .brand-title {
+    font-size: 1.2rem;
+  }
+  .search-sort-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="siliconeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0f2942"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="480" fill="url(#bgGrad)" />
+  <circle cx="300" cy="240" r="170" fill="#e0f2fe" opacity="0.6" />
+
+  <!-- Split Silicone Mask Strap (Wavy elegant curve) -->
+  <g transform="translate(60, 110)">
+    <!-- Left Strap End with adjustment ridges -->
+    <rect x="20" y="110" width="100" height="26" rx="4" fill="#0369a1" />
+    <!-- Ridges -->
+    <line x1="35" y1="110" x2="35" y2="136" stroke="white" stroke-width="2" />
+    <line x1="45" y1="110" x2="45" y2="136" stroke="white" stroke-width="2" />
+    <line x1="55" y1="110" x2="55" y2="136" stroke="white" stroke-width="2" />
+    <line x1="65" y1="110" x2="65" y2="136" stroke="white" stroke-width="2" />
+    <line x1="75" y1="110" x2="75" y2="136" stroke="white" stroke-width="2" />
+    <line x1="85" y1="110" x2="85" y2="136" stroke="white" stroke-width="2" />
+    <line x1="95" y1="110" x2="95" y2="136" stroke="white" stroke-width="2" />
+
+    <!-- Split Head Cradle (Upper Arch) -->
+    <path d="M 110,115 C 180,60 300,50 370,115" stroke="url(#siliconeGrad)" stroke-width="24" fill="none" stroke-linecap="round" />
+    <!-- Split Head Cradle (Lower Arch) -->
+    <path d="M 110,130 C 180,185 300,195 370,130" stroke="url(#siliconeGrad)" stroke-width="24" fill="none" stroke-linecap="round" />
+
+    <!-- Center Opening Label -->
+    <text x="240" y="130" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#0284c7" text-anchor="middle">OCCIPITAL CRADLE</text>
+
+    <!-- Right Strap End with adjustment ridges -->
+    <rect x="360" y="110" width="100" height="26" rx="4" fill="#0369a1" />
+    <line x1="375" y1="110" x2="375" y2="136" stroke="white" stroke-width="2" />
+    <line x1="385" y1="110" x2="385" y2="136" stroke="white" stroke-width="2" />
+    <line x1="395" y1="110" x2="395" y2="136" stroke="white" stroke-width="2" />
+    <line x1="405" y1="110" x2="405" y2="136" stroke="white" stroke-width="2" />
+    <line x1="415" y1="110" x2="415" y2="136" stroke="white" stroke-width="2" />
+    <line x1="425" y1="110" x2="425" y2="136" stroke="white" stroke-width="2" />
+    <line x1="435" y1="110" x2="435" y2="136" stroke="white" stroke-width="2" />
+
+    <!-- Silicone Texture Highlights -->
+    <path d="M 120,110 C 180,55 300,45 360,110" stroke="white" stroke-width="2" fill="none" opacity="0.5" />
+    <path d="M 120,135 C 180,190 300,200 360,135" stroke="#0a192f" stroke-width="2" fill="none" opacity="0.3" />
+  </g>
+
+  <!-- Red Hanko Seal Badge -->
+  <rect x="505" y="25" width="65" height="65" rx="4" fill="none" stroke="#dc2626" stroke-width="2" />
+  <rect x="510" y="30" width="55" height="55" rx="2" fill="none" stroke="#dc2626" stroke-width="1" />
+  <text x="537" y="52" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">予備</text>
+  <text x="537" y="74" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">規格</text>
+
+  <!-- Technical Spec Markers -->
+  <text x="35" y="45" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0284c7" letter-spacing="2">GA-ACS-13 • 100% PURE SILICONE</text>
+  <text x="35" y="65" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#0f2942">マスク用 交換シリコンストラップ (ユニバーサルスプリット規格)</text>
+</svg>

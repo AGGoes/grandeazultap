@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="gloveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="60%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <pattern id="hexGrip" width="12" height="12" patternUnits="userSpaceOnUse">
+      <path d="M 6,0 L 12,3 L 12,9 L 6,12 L 0,9 L 0,3 Z" fill="none" stroke="#38bdf8" stroke-width="0.8" opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <rect width="600" height="480" fill="url(#bgGrad)" />
+  <circle cx="300" cy="240" r="170" fill="#e0f2fe" opacity="0.5" />
+
+  <!-- Left Glove (Dorsal view) -->
+  <g transform="translate(140, 90) rotate(-10)">
+    <!-- Wrist & Cuff -->
+    <rect x="50" y="220" width="80" height="70" rx="6" fill="#0f172a" />
+    <rect x="45" y="240" width="90" height="20" rx="3" fill="#0284c7" />
+    <rect x="95" y="238" width="35" height="24" rx="2" fill="#0369a1" />
+    <text x="112" y="254" font-family="'Inter', sans-serif" font-size="8" font-weight="bold" fill="white" text-anchor="middle">2.0mm</text>
+
+    <!-- Palm/Hand Body -->
+    <path d="M 45,130 C 45,90 60,70 85,70 C 110,70 135,90 135,130 L 130,225 L 50,225 Z" fill="url(#gloveGrad)" />
+
+    <!-- Fingers -->
+    <!-- Pinky -->
+    <rect x="42" y="65" width="18" height="65" rx="9" fill="#1e293b" />
+    <!-- Ring -->
+    <rect x="63" y="40" width="19" height="90" rx="9.5" fill="#1e293b" />
+    <!-- Middle -->
+    <rect x="85" y="30" width="19" height="100" rx="9.5" fill="#0f172a" />
+    <!-- Index -->
+    <rect x="107" y="45" width="19" height="85" rx="9.5" fill="#1e293b" />
+    <!-- Thumb (Angled) -->
+    <g transform="translate(130, 140) rotate(35)">
+      <rect x="0" y="0" width="22" height="60" rx="11" fill="#1e293b" />
+    </g>
+    <!-- Stitch Lines -->
+    <path d="M 50,140 Q 90,130 130,140" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="3,2" fill="none" />
+  </g>
+
+  <!-- Right Glove (Palm view with anti-slip hex grip) -->
+  <g transform="translate(320, 100) rotate(12)">
+    <!-- Wrist & Cuff -->
+    <rect x="50" y="220" width="80" height="70" rx="6" fill="#0f172a" />
+    <rect x="45" y="240" width="90" height="20" rx="3" fill="#0284c7" />
+
+    <!-- Palm/Hand Body -->
+    <path d="M 45,130 C 45,90 60,70 85,70 C 110,70 135,90 135,130 L 130,225 L 50,225 Z" fill="url(#gloveGrad)" />
+
+    <!-- Fingers with Grip -->
+    <rect x="42" y="65" width="18" height="65" rx="9" fill="#1e293b" />
+    <rect x="63" y="40" width="19" height="90" rx="9.5" fill="#1e293b" />
+    <rect x="85" y="30" width="19" height="100" rx="9.5" fill="#0f172a" />
+    <rect x="107" y="45" width="19" height="85" rx="9.5" fill="#1e293b" />
+    <g transform="translate(20, 140) rotate(-35)">
+      <rect x="0" y="0" width="22" height="60" rx="11" fill="#1e293b" />
+      <rect x="3" y="5" width="16" height="50" rx="8" fill="url(#hexGrip)" />
+    </g>
+
+    <!-- Palm Hex Grip Overlay -->
+    <path d="M 52,120 Q 90,110 128,120 L 124,200 L 56,200 Z" fill="url(#hexGrip)" />
+  </g>
+
+  <!-- Red Hanko Seal Badge -->
+  <rect x="505" y="25" width="65" height="65" rx="4" fill="none" stroke="#dc2626" stroke-width="2" />
+  <rect x="510" y="30" width="55" height="55" rx="2" fill="none" stroke="#dc2626" stroke-width="1" />
+  <text x="537" y="52" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">防寒</text>
+  <text x="537" y="74" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">滑止</text>
+
+  <!-- Technical Label -->
+  <text x="35" y="45" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0284c7" letter-spacing="2">GA-VES-08 • 2.0MM THERMAL PROTECTION</text>
+  <text x="35" y="65" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#0f2942">2mm ネオプレン ダイビンググローブ (パーム滑り止め加工)</text>
+</svg>

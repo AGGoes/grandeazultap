@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="tankBodyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="35%" stop-color="#334155"/>
+      <stop offset="70%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="regGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#facc15"/>
+      <stop offset="50%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#ca8a04"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="480" fill="url(#bgGrad)" />
+  <circle cx="300" cy="240" r="170" fill="#e0f2fe" opacity="0.6" />
+
+  <!-- Mini Cilindro Reserva (Spare Air) -->
+  <g transform="translate(255, 50)">
+    <!-- Integrated Regulator Top Assembly -->
+    <!-- Purge Button (Front Center) -->
+    <ellipse cx="45" cy="35" rx="20" ry="12" fill="#0284c7" stroke="#0369a1" stroke-width="2" />
+    <text x="45" y="38" font-family="'Inter', sans-serif" font-size="7" font-weight="900" fill="white" text-anchor="middle">PURGE</text>
+
+    <!-- Mouthpiece (Right angled silicone bocal) -->
+    <path d="M 65,30 L 95,20 L 95,50 L 65,40 Z" fill="#0f172a" />
+    <rect x="95" y="22" width="22" height="26" rx="4" fill="#38bdf8" opacity="0.85" />
+    <!-- Bite tabs -->
+    <rect x="110" y="20" width="8" height="6" fill="#0f172a" />
+    <rect x="110" y="44" width="8" height="6" fill="#0f172a" />
+
+    <!-- Pressure Indicator Pin / Dial (Left Side) -->
+    <rect x="10" y="28" width="16" height="14" rx="2" fill="#22c55e" stroke="#15803d" stroke-width="1.5" />
+    <circle cx="18" cy="35" r="3" fill="white" />
+
+    <!-- Regulator Body Collar -->
+    <rect x="25" y="46" width="40" height="22" rx="3" fill="#facc15" stroke="#ca8a04" stroke-width="1" />
+    <text x="45" y="60" font-family="'Inter', sans-serif" font-size="7" font-weight="900" fill="#713f12" text-anchor="middle">BALANCED</text>
+
+    <!-- Cylinder Dome & Neck -->
+    <path d="M 28,68 L 62,68 C 82,72 85,95 85,110 L 5,110 C 5,95 8,72 28,68 Z" fill="url(#tankBodyGrad)" />
+
+    <!-- Cylinder Main Body (Black Anodized Aluminum 3.0 cu ft) -->
+    <rect x="5" y="110" width="80" height="230" rx="2" fill="url(#tankBodyGrad)" />
+
+    <!-- Neon Yellow Safety Band -->
+    <rect x="5" y="150" width="80" height="85" fill="url(#regGrad)" />
+    <text x="45" y="180" font-family="'Inter', sans-serif" font-size="11" font-weight="900" fill="#0f172a" text-anchor="middle" letter-spacing="1">SPARE AIR</text>
+    <text x="45" y="196" font-family="'Inter', sans-serif" font-size="8" font-weight="bold" fill="#0369a1" text-anchor="middle">3.0 CU FT • 85L</text>
+    <text x="45" y="210" font-family="'Noto Sans JP', sans-serif" font-size="7" font-weight="bold" fill="#0f172a" text-anchor="middle">緊急用呼吸器</text>
+    <text x="45" y="224" font-family="'Inter', sans-serif" font-size="6" font-weight="bold" fill="#713f12" text-anchor="middle">GRANDE AZUL BACKUP</text>
+
+    <!-- Cylinder Rounded Bottom -->
+    <path d="M 5,340 C 5,365 85,365 85,340 Z" fill="url(#tankBodyGrad)" />
+
+    <!-- Holster Leash / Lanyard -->
+    <path d="M 15,350 C -15,380 -5,410 30,390" stroke="#f59e0b" stroke-width="4" fill="none" stroke-linecap="round" />
+  </g>
+
+  <!-- Red Hanko Seal Badge -->
+  <rect x="505" y="25" width="65" height="65" rx="4" fill="none" stroke="#dc2626" stroke-width="2" />
+  <rect x="510" y="30" width="55" height="55" rx="2" fill="none" stroke="#dc2626" stroke-width="1" />
+  <text x="537" y="52" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">緊急</text>
+  <text x="537" y="74" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">生命</text>
+
+  <!-- Technical Spec Markers -->
+  <text x="35" y="45" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0284c7" letter-spacing="2">GA-EQP-02 • EMERGENCY BACKUP AIR</text>
+  <text x="35" y="65" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#0f2942">スペアエアー・緊急用小型シリンダー (一体型レギュレーター)</text>
+  <text x="35" y="430" font-family="'Inter', sans-serif" font-size="11" fill="#64748b">CAPACITY: 85L AIR (3.0 CU FT) • 200 BAR • WEIGHT: 985G • REFILLABLE</text>
+</svg>

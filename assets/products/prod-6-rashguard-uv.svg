@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="shirtGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f2942"/>
+      <stop offset="50%" stop-color="#0a192f"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="480" fill="url(#bgGrad)" />
+  <circle cx="300" cy="240" r="170" fill="#e0f2fe" opacity="0.6" />
+
+  <!-- Rashguard Body & Sleeves -->
+  <g transform="translate(100, 60)">
+    <!-- Left Sleeve -->
+    <path d="M 140,80 L 10,190 L 35,220 L 130,140 Z" fill="#0284c7" />
+    <path d="M 35,220 L 20,205" stroke="#38bdf8" stroke-width="2" />
+
+    <!-- Right Sleeve -->
+    <path d="M 260,80 L 390,190 L 365,220 L 270,140 Z" fill="#0284c7" />
+    <path d="M 365,220 L 380,205" stroke="#38bdf8" stroke-width="2" />
+
+    <!-- Main Torso -->
+    <path d="M 140,80 C 170,95 230,95 260,80 L 285,160 L 270,340 L 130,340 L 115,160 Z" fill="url(#shirtGrad)" />
+
+    <!-- Mock Collar (High Neck UV) -->
+    <path d="M 160,80 C 180,68 220,68 240,80 L 245,60 C 220,50 180,50 155,60 Z" fill="#0369a1" />
+
+    <!-- Ergonomic Flatlock Seam Lines -->
+    <path d="M 155,90 C 175,170 175,260 150,335" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4,2" fill="none" />
+    <path d="M 245,90 C 225,170 225,260 250,335" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4,2" fill="none" />
+
+    <!-- Chest Emblem: Trident & Grande Azul -->
+    <circle cx="200" cy="155" r="24" fill="rgba(255,255,255,0.08)" stroke="#38bdf8" stroke-width="1.5" />
+    <path d="M 200,140 L 200,170 M 193,148 L 193,160 C 193,168 207,168 207,160 L 207,148" stroke="#38bdf8" stroke-width="2" fill="none" />
+    <text x="200" y="195" font-family="'Inter', sans-serif" font-size="10" font-weight="800" fill="white" text-anchor="middle" letter-spacing="2">GRANDE AZUL</text>
+    <text x="200" y="210" font-family="'Noto Sans JP', sans-serif" font-size="8" fill="#93c5fd" text-anchor="middle">UPF 50+ UV SHIELD</text>
+
+    <!-- Side Ventilation Panels -->
+    <path d="M 118,170 L 135,170 L 140,310 L 126,310 Z" fill="#0284c7" opacity="0.6" />
+    <path d="M 282,170 L 265,170 L 260,310 L 274,310 Z" fill="#0284c7" opacity="0.6" />
+  </g>
+
+  <!-- Red Hanko Seal Badge -->
+  <rect x="505" y="25" width="65" height="65" rx="4" fill="none" stroke="#dc2626" stroke-width="2" />
+  <rect x="510" y="30" width="55" height="55" rx="2" fill="none" stroke="#dc2626" stroke-width="1" />
+  <text x="537" y="52" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">日焼</text>
+  <text x="537" y="74" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">防止</text>
+
+  <!-- Technical Spec Markers -->
+  <text x="35" y="45" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0284c7" letter-spacing="2">GA-VES-06 • UPF 50+ HYDRO-SHIELD</text>
+  <text x="35" y="65" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#0f2942">UVカット ラッシュガード (速乾・高伸縮・日焼け止め)</text>
+</svg>

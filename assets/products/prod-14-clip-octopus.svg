@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="neonYellow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="50%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#ca8a04"/>
+    </linearGradient>
+    <linearGradient id="delrinBlack" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="480" fill="url(#bgGrad)" />
+  <circle cx="300" cy="240" r="170" fill="#e0f2fe" opacity="0.6" />
+
+  <!-- Octopus Holder Clip (360° Swivel Carabiner + Silicone Ball Retainer) -->
+  <g transform="translate(180, 70)">
+    <!-- Swivel Carabiner Clip on Top -->
+    <!-- Swivel Ring Base -->
+    <rect x="95" y="40" width="50" height="18" rx="4" fill="url(#delrinBlack)" />
+    <circle cx="120" cy="49" r="4" fill="#94a3b8" />
+
+    <!-- 360° Snap Hook / Carabiner -->
+    <path d="M 120,40 L 120,10 C 120,-30 80,-30 80,0 L 80,20 C 80,35 110,35 110,20 L 110,5" stroke="#0284c7" stroke-width="12" fill="none" stroke-linecap="round" />
+    <!-- Spring Gate (Inox) -->
+    <line x1="82" y1="-5" x2="106" y2="15" stroke="#cbd5e1" stroke-width="4" />
+
+    <!-- Heavy Duty Webbing Strap -->
+    <rect x="105" y="58" width="30" height="70" fill="#0f172a" />
+    <line x1="110" y1="65" x2="130" y2="120" stroke="#0284c7" stroke-width="2" />
+    <line x1="130" y1="65" x2="110" y2="120" stroke="#0284c7" stroke-width="2" />
+
+    <!-- Quick Release Retainer Collar -->
+    <rect x="85" y="128" width="70" height="25" rx="5" fill="url(#delrinBlack)" />
+
+    <!-- Silicone Ball / Mouthpiece Plug (High-Visibility Neon Yellow) -->
+    <circle cx="120" cy="210" r="55" fill="url(#neonYellow)" stroke="#a16207" stroke-width="2" />
+    <!-- Center Plug for Regulator Mouthpiece -->
+    <ellipse cx="120" cy="210" rx="36" ry="24" fill="#ca8a04" />
+    <ellipse cx="120" cy="210" rx="28" ry="16" fill="#713f12" />
+
+    <!-- Grip Ribs on Ball -->
+    <path d="M 80,185 Q 120,200 160,185" stroke="#fef08a" stroke-width="3" fill="none" />
+    <path d="M 80,235 Q 120,220 160,235" stroke="#ca8a04" stroke-width="3" fill="none" />
+
+    <!-- Quick Release Pull Tab -->
+    <rect x="100" y="270" width="40" height="40" rx="6" fill="#ef4444" />
+    <polygon points="120,280 110,295 130,295" fill="white" />
+    <text x="120" y="306" font-family="'Inter', sans-serif" font-size="6" font-weight="bold" fill="white" text-anchor="middle">PULL</text>
+  </g>
+
+  <!-- Red Hanko Seal Badge -->
+  <rect x="505" y="25" width="65" height="65" rx="4" fill="none" stroke="#dc2626" stroke-width="2" />
+  <rect x="510" y="30" width="55" height="55" rx="2" fill="none" stroke="#dc2626" stroke-width="1" />
+  <text x="537" y="52" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">即時</text>
+  <text x="537" y="74" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">展開</text>
+
+  <!-- Technical Spec Markers -->
+  <text x="35" y="45" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0284c7" letter-spacing="2">GA-ACS-14 • OCTOPUS QUICK RETAINER</text>
+  <text x="35" y="65" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#0f2942">オクトパス ホースクリップホルダー (360°回転スイベル付)</text>
+</svg>

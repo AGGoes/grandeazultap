@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="brushedAluminum" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#cbd5e1"/>
+      <stop offset="25%" stop-color="#f1f5f9"/>
+      <stop offset="50%" stop-color="#ffffff"/>
+      <stop offset="75%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+    <linearGradient id="brassChromeValve" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#64748b"/>
+      <stop offset="40%" stop-color="#f8fafc"/>
+      <stop offset="80%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="480" fill="url(#bgGrad)" />
+  <circle cx="300" cy="240" r="170" fill="#e0f2fe" opacity="0.6" />
+
+  <!-- Scuba Aluminum Cylinder S80 -->
+  <g transform="translate(230, 45)">
+    <!-- Valve / Torneira Modular DIN/YOKE -->
+    <!-- Valve Stem -->
+    <rect x="58" y="25" width="24" height="20" fill="url(#brassChromeValve)" />
+    <!-- Valve Main Body -->
+    <path d="M 45,10 L 95,10 L 95,32 L 45,32 Z" fill="url(#brassChromeValve)" />
+    <!-- Yoke/DIN Outlet Port -->
+    <rect x="95" y="14" width="16" height="14" rx="2" fill="#334155" />
+    <circle cx="103" cy="21" r="4" fill="#0284c7" />
+    <!-- Valve Handwheel / Knob (Black Rubber Grip) -->
+    <rect x="15" y="12" width="30" height="18" rx="4" fill="#0f172a" />
+    <line x1="22" y1="12" x2="22" y2="30" stroke="#475569" stroke-width="2" />
+    <line x1="30" y1="12" x2="30" y2="30" stroke="#475569" stroke-width="2" />
+    <line x1="38" y1="12" x2="38" y2="30" stroke="#475569" stroke-width="2" />
+    <!-- Burst Disk Safety Nut -->
+    <circle cx="70" cy="8" r="5" fill="#f59e0b" />
+
+    <!-- Cylinder Neck & Dome Shoulder -->
+    <path d="M 55,45 L 85,45 C 135,50 140,90 140,110 L 0,110 C 0,90 5,50 55,45 Z" fill="url(#brushedAluminum)" />
+
+    <!-- Cylinder Main Body (S80 11.1L) -->
+    <rect x="0" y="110" width="140" height="260" fill="url(#brushedAluminum)" />
+
+    <!-- Technical Stamping & Specification Marking on Shoulder -->
+    <text x="70" y="80" font-family="'Inter', sans-serif" font-size="7" font-weight="bold" fill="#475569" text-anchor="middle" letter-spacing="1">DOT-3AL 3000 • S80 • 11.1L</text>
+    <text x="70" y="94" font-family="'Inter', sans-serif" font-size="7" font-weight="bold" fill="#0284c7" text-anchor="middle" letter-spacing="1">GRANDE AZUL TESTED 207 BAR</text>
+
+    <!-- Cylinder Protective Mesh / Decal Band -->
+    <rect x="5" y="180" width="130" height="60" rx="3" fill="#0284c7" opacity="0.9" />
+    <text x="70" y="210" font-family="'Shippori Mincho', serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="2">GRANDE AZUL</text>
+    <text x="70" y="225" font-family="'Noto Sans JP', sans-serif" font-size="9" fill="#e0f2fe" text-anchor="middle">深海アルミニウムシリンダー</text>
+
+    <!-- Cylinder Bottom / Rounded Base with Tank Boot -->
+    <path d="M 0,370 C 0,395 140,395 140,370 Z" fill="url(#brushedAluminum)" />
+    <!-- Rubber Tank Boot (Self-standing bottom) -->
+    <path d="M -5,350 L 145,350 L 142,395 L -2,395 Z" fill="#0f172a" />
+    <line x1="20" y1="355" x2="20" y2="390" stroke="#334155" stroke-width="3" />
+    <line x1="70" y1="355" x2="70" y2="390" stroke="#334155" stroke-width="3" />
+    <line x1="120" y1="355" x2="120" y2="390" stroke="#334155" stroke-width="3" />
+  </g>
+
+  <!-- Red Hanko Seal Badge -->
+  <rect x="505" y="25" width="65" height="65" rx="4" fill="none" stroke="#dc2626" stroke-width="2" />
+  <rect x="510" y="30" width="55" height="55" rx="2" fill="none" stroke="#dc2626" stroke-width="1" />
+  <text x="537" y="52" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">耐圧</text>
+  <text x="537" y="74" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">合格</text>
+
+  <!-- Technical Spec Markers -->
+  <text x="35" y="45" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0284c7" letter-spacing="2">GA-EQP-01 • STANDARD S80 CYLINDER</text>
+  <text x="35" y="65" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#0f2942">S80 アルミニウムシリンダー 11.1L (DIN/Yokeモジュラーバルブ付)</text>
+  <text x="35" y="430" font-family="'Inter', sans-serif" font-size="11" fill="#64748b">WORKING PRESSURE: 207 BAR (3000 PSI) • 6061-T6 HIGH STRENGTH ALLOY</text>
+</svg>

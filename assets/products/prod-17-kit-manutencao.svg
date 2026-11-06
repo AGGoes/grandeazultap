@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="brassGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="50%" stop-color="#ca8a04"/>
+      <stop offset="100%" stop-color="#a16207"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="480" fill="url(#bgGrad)" />
+  <circle cx="300" cy="240" r="170" fill="#e0f2fe" opacity="0.6" />
+
+  <!-- Hard Case (Open View with O-rings) -->
+  <g transform="translate(70, 95)">
+    <!-- Main Clear Case Base -->
+    <rect x="20" y="30" width="420" height="270" rx="12" fill="url(#boxGrad)" stroke="#0284c7" stroke-width="3" />
+    <rect x="28" y="38" width="404" height="254" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+
+    <!-- Latches -->
+    <rect x="110" y="20" width="50" height="15" rx="3" fill="#0369a1" />
+    <rect x="300" y="20" width="50" height="15" rx="3" fill="#0369a1" />
+
+    <!-- Case Compartments Grid -->
+    <!-- Compartment 1: Large O-rings (Cylinder valve DIN/YOKE) -->
+    <rect x="40" y="55" width="110" height="100" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1" />
+    <circle cx="95" cy="105" r="34" fill="none" stroke="#0f172a" stroke-width="8" />
+    <circle cx="95" cy="105" r="26" fill="none" stroke="#0f172a" stroke-width="7" />
+    <text x="95" y="145" font-family="'Inter', sans-serif" font-size="8" font-weight="bold" fill="#64748b" text-anchor="middle">DIN / YOKE (014/111)</text>
+
+    <!-- Compartment 2: Medium O-rings (HP / LP hoses) -->
+    <rect x="160" y="55" width="110" height="100" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1" />
+    <circle cx="215" cy="105" r="22" fill="none" stroke="#16a34a" stroke-width="6" /> <!-- Viton green ring -->
+    <circle cx="215" cy="105" r="15" fill="none" stroke="#0f172a" stroke-width="5" />
+    <circle cx="215" cy="105" r="9" fill="none" stroke="#0f172a" stroke-width="4" />
+    <text x="215" y="145" font-family="'Inter', sans-serif" font-size="8" font-weight="bold" fill="#64748b" text-anchor="middle">HP/LP HOSE (010/011)</text>
+
+    <!-- Compartment 3: Silicone Grease Tube -->
+    <rect x="280" y="55" width="140" height="100" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1" />
+    <!-- Tube Graphic -->
+    <g transform="translate(290, 75)">
+      <!-- Tube Body -->
+      <polygon points="15,40 105,30 105,60 15,50" fill="#0284c7" />
+      <polygon points="105,30 115,35 115,55 105,60" fill="#0369a1" />
+      <!-- Cap -->
+      <rect x="115" y="38" width="10" height="14" rx="2" fill="#ffffff" stroke="#94a3b8" />
+      <text x="55" y="47" font-family="'Inter', sans-serif" font-size="7" font-weight="900" fill="white">SILICONE 100%</text>
+    </g>
+
+    <!-- Compartment 4: Brass O-Ring Pick Tool -->
+    <rect x="40" y="165" width="380" height="60" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1" />
+    <!-- Brass Pick Tool Drawing -->
+    <g transform="translate(60, 185)">
+      <!-- Handle Knurled -->
+      <rect x="40" y="6" width="180" height="14" rx="3" fill="url(#brassGrad)" />
+      <line x1="60" y1="6" x2="60" y2="20" stroke="#713f12" stroke-width="1" />
+      <line x1="80" y1="6" x2="80" y2="20" stroke="#713f12" stroke-width="1" />
+      <line x1="100" y1="6" x2="100" y2="20" stroke="#713f12" stroke-width="1" />
+      <line x1="120" y1="6" x2="120" y2="20" stroke="#713f12" stroke-width="1" />
+      <line x1="140" y1="6" x2="140" y2="20" stroke="#713f12" stroke-width="1" />
+      <line x1="160" y1="6" x2="160" y2="20" stroke="#713f12" stroke-width="1" />
+      <line x1="180" y1="6" x2="180" y2="20" stroke="#713f12" stroke-width="1" />
+      <line x1="200" y1="6" x2="200" y2="20" stroke="#713f12" stroke-width="1" />
+      <!-- Left Pick Curved Tip -->
+      <path d="M 40,13 L 15,13 Q 5,13 8,3" stroke="url(#brassGrad)" stroke-width="3" fill="none" stroke-linecap="round" />
+      <!-- Right Pick Spoon Tip -->
+      <path d="M 220,13 L 250,13 Q 260,13 258,23" stroke="url(#brassGrad)" stroke-width="3" fill="none" stroke-linecap="round" />
+      <text x="130" y="32" font-family="'Inter', sans-serif" font-size="8" font-weight="bold" fill="#713f12" text-anchor="middle">SOLID BRASS NON-SCRATCH O-RING EXTRACTOR</text>
+    </g>
+
+    <!-- Bottom Specs Ribbon -->
+    <rect x="40" y="235" width="380" height="45" rx="4" fill="#0f172a" />
+    <text x="230" y="255" font-family="'Inter', sans-serif" font-size="10" font-weight="bold" fill="#38bdf8" text-anchor="middle">KIT SALVA-MERGULHO OFICIAL • 20 O-RINGS (NBR 70 + VITON O2 CLEAN)</text>
+    <text x="230" y="269" font-family="'Noto Sans JP', sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">予備パーツ完備 • 緊急メンテナンス対応</text>
+  </g>
+
+  <!-- Red Hanko Seal Badge -->
+  <rect x="505" y="25" width="65" height="65" rx="4" fill="none" stroke="#dc2626" stroke-width="2" />
+  <rect x="510" y="30" width="55" height="55" rx="2" fill="none" stroke="#dc2626" stroke-width="1" />
+  <text x="537" y="52" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">安心</text>
+  <text x="537" y="74" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">整備</text>
+
+  <!-- Technical Spec Markers -->
+  <text x="35" y="45" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0284c7" letter-spacing="2">GA-ACS-17 • SAVE-A-DIVE TOOLKIT</text>
+  <text x="35" y="65" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#0f2942">ダイビングメンテナンスキット (Oリング20個＋シリコングリス＋真鍮ピック)</text>
+</svg>

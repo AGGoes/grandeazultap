@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="finGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f2942"/>
+      <stop offset="50%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0a192f"/>
+    </linearGradient>
+    <linearGradient id="waterWave" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#bae6fd" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Studio Box -->
+  <rect width="600" height="480" fill="url(#bgGrad)" />
+  <circle cx="300" cy="240" r="180" fill="url(#waterWave)" />
+
+  <!-- Subtle Japanese Seigaiha Waves in BG -->
+  <path d="M 50,420 A 40,40 0 0,1 130,420 M 70,420 A 20,20 0 0,1 110,420" stroke="#cbd5e1" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <path d="M 130,420 A 40,40 0 0,1 210,420 M 150,420 A 20,20 0 0,1 190,420" stroke="#cbd5e1" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <path d="M 90,390 A 40,40 0 0,1 170,390 M 110,390 A 20,20 0 0,1 150,390" stroke="#cbd5e1" stroke-width="1.5" fill="none" opacity="0.6"/>
+
+  <!-- Pair of High Performance Open Heel Fins -->
+  <!-- Left Fin (Angled) -->
+  <g transform="translate(190, 70) rotate(-14)">
+    <!-- Heel Spring Strap -->
+    <path d="M 35,40 C 35,10 75,10 75,40" stroke="#94a3b8" stroke-width="7" fill="none" stroke-linecap="round" />
+    <rect x="50" y="8" width="10" height="16" rx="3" fill="#0284c7" />
+    <!-- Foot Pocket -->
+    <path d="M 25,40 L 85,40 L 95,140 L 15,140 Z" fill="#1e293b" />
+    <path d="M 30,50 L 80,50 L 88,135 L 22,135 Z" fill="#0f172a" />
+    <!-- Blade Transition -->
+    <path d="M 15,140 L 95,140 L 115,330 C 115,350 95,360 85,360 L 55,345 L 25,360 C 15,360 -5,350 -5,330 Z" fill="url(#finGrad)" />
+    <!-- Hydrodynamic Flow Channels -->
+    <path d="M 25,160 L 15,335" stroke="#38bdf8" stroke-width="5" stroke-linecap="round" />
+    <path d="M 85,160 L 95,335" stroke="#38bdf8" stroke-width="5" stroke-linecap="round" />
+    <path d="M 45,180 L 40,310" stroke="#0a192f" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+    <path d="M 65,180 L 70,310" stroke="#0a192f" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+    <!-- Vent Vents -->
+    <ellipse cx="55" cy="155" rx="16" ry="6" fill="#0f172a" />
+  </g>
+
+  <!-- Right Fin (Angled) -->
+  <g transform="translate(320, 90) rotate(10)">
+    <!-- Heel Spring Strap -->
+    <path d="M 35,40 C 35,10 75,10 75,40" stroke="#94a3b8" stroke-width="7" fill="none" stroke-linecap="round" />
+    <rect x="50" y="8" width="10" height="16" rx="3" fill="#0284c7" />
+    <!-- Foot Pocket -->
+    <path d="M 25,40 L 85,40 L 95,140 L 15,140 Z" fill="#1e293b" />
+    <path d="M 30,50 L 80,50 L 88,135 L 22,135 Z" fill="#0f172a" />
+    <!-- Blade Transition -->
+    <path d="M 15,140 L 95,140 L 115,330 C 115,350 95,360 85,360 L 55,345 L 25,360 C 15,360 -5,350 -5,330 Z" fill="url(#finGrad)" />
+    <!-- Hydrodynamic Flow Channels -->
+    <path d="M 25,160 L 15,335" stroke="#38bdf8" stroke-width="5" stroke-linecap="round" />
+    <path d="M 85,160 L 95,335" stroke="#38bdf8" stroke-width="5" stroke-linecap="round" />
+    <path d="M 45,180 L 40,310" stroke="#0a192f" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+    <path d="M 65,180 L 70,310" stroke="#0a192f" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+    <!-- Vent Vents -->
+    <ellipse cx="55" cy="155" rx="16" ry="6" fill="#0f172a" />
+  </g>
+
+  <!-- Red Hanko Seal Badge -->
+  <rect x="505" y="25" width="65" height="65" rx="4" fill="none" stroke="#dc2626" stroke-width="2" />
+  <rect x="510" y="30" width="55" height="55" rx="2" fill="none" stroke="#dc2626" stroke-width="1" />
+  <text x="537" y="52" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">推進</text>
+  <text x="537" y="74" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">最高</text>
+
+  <!-- Technical Label -->
+  <text x="35" y="45" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0284c7" letter-spacing="2">GA-VES-07 • TECHNICAL DIVE GEAR</text>
+  <text x="35" y="65" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#0f2942">オープンヒール調節可能フィン (スプリングストラップ付)</text>
+</svg>

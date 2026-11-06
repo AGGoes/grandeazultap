@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1726"/>
+      <stop offset="100%" stop-color="#021427"/>
+    </linearGradient>
+    <linearGradient id="metalBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="30%" stop-color="#1e293b"/>
+      <stop offset="70%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <linearGradient id="beamLight" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="30%" stop-color="#0284c7" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="goldRing" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#facc15"/>
+      <stop offset="50%" stop-color="#ca8a04"/>
+      <stop offset="100%" stop-color="#eab308"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Deep Ocean Dark Background -->
+  <rect width="600" height="480" fill="url(#bgGrad)" />
+
+  <!-- Light Beam Expanding to Right -->
+  <polygon points="340,240 580,120 580,360" fill="url(#beamLight)" />
+  <circle cx="340" cy="240" r="18" fill="#e0f2fe" opacity="0.9" />
+
+  <!-- Dive Torch (Horizontally Centered) -->
+  <g transform="translate(40, 185)">
+    <!-- Lanyard / Wrist Strap -->
+    <path d="M 40,55 C 10,55 0,100 20,130 C 40,150 70,130 60,80" stroke="#f59e0b" stroke-width="4" fill="none" stroke-linecap="round" />
+    <rect x="52" y="85" width="14" height="18" rx="3" fill="#1e293b" />
+
+    <!-- Tail Cap with O-ring area -->
+    <rect x="40" y="32" width="40" height="46" rx="4" fill="url(#metalBody)" />
+    <!-- Lanyard hole -->
+    <circle cx="50" cy="55" r="4" fill="#0f172a" stroke="#64748b" stroke-width="1.5" />
+
+    <!-- Knurled Battery Tube -->
+    <rect x="80" y="35" width="140" height="40" fill="url(#metalBody)" />
+    <!-- Grip lines -->
+    <line x1="95" y1="35" x2="95" y2="75" stroke="#64748b" stroke-width="2" />
+    <line x1="105" y1="35" x2="105" y2="75" stroke="#64748b" stroke-width="2" />
+    <line x1="115" y1="35" x2="115" y2="75" stroke="#64748b" stroke-width="2" />
+    <line x1="125" y1="35" x2="125" y2="75" stroke="#64748b" stroke-width="2" />
+    <line x1="135" y1="35" x2="135" y2="75" stroke="#64748b" stroke-width="2" />
+    <line x1="145" y1="35" x2="145" y2="75" stroke="#64748b" stroke-width="2" />
+    <line x1="155" y1="35" x2="155" y2="75" stroke="#64748b" stroke-width="2" />
+    <line x1="165" y1="35" x2="165" y2="75" stroke="#64748b" stroke-width="2" />
+    <line x1="175" y1="35" x2="175" y2="75" stroke="#64748b" stroke-width="2" />
+
+    <!-- Brand Inscription on Tube -->
+    <text x="135" y="58" font-family="'Inter', sans-serif" font-size="8" font-weight="800" fill="#94a3b8" text-anchor="middle" letter-spacing="1.5">GRANDE AZUL • 1000LM</text>
+
+    <!-- Magnetic Switch Collar -->
+    <rect x="220" y="30" width="30" height="50" rx="3" fill="#1e293b" />
+    <!-- Magnetic Sliding Switch Toggle -->
+    <rect x="226" y="24" width="18" height="12" rx="3" fill="#ef4444" stroke="#b91c1c" stroke-width="1.5" />
+
+    <!-- Gold Accent Ring -->
+    <rect x="250" y="28" width="8" height="54" fill="url(#goldRing)" />
+
+    <!-- Head / Bezel (Flared) -->
+    <path d="M 258,26 L 315,16 L 315,94 L 258,84 Z" fill="url(#metalBody)" />
+    <!-- Cooling Fins on Head -->
+    <rect x="268" y="22" width="4" height="66" fill="#0f172a" />
+    <rect x="278" y="20" width="4" height="70" fill="#0f172a" />
+    <rect x="288" y="18" width="4" height="74" fill="#0f172a" />
+
+    <!-- Lens Ring & Optical Glass -->
+    <rect x="315" y="15" width="8" height="80" rx="2" fill="#64748b" />
+    <line x1="323" y1="18" x2="323" y2="92" stroke="#e0f2fe" stroke-width="4" />
+  </g>
+
+  <!-- Red Hanko Seal Badge -->
+  <rect x="505" y="25" width="65" height="65" rx="4" fill="none" stroke="#ef4444" stroke-width="2" />
+  <rect x="510" y="30" width="55" height="55" rx="2" fill="none" stroke="#ef4444" stroke-width="1" />
+  <text x="537" y="52" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#ef4444" text-anchor="middle">深海</text>
+  <text x="537" y="74" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#ef4444" text-anchor="middle">光照</text>
+
+  <!-- Technical Spec Markers -->
+  <text x="35" y="45" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#38bdf8" letter-spacing="2">GA-ELE-11 • CREE XM-L2 LED</text>
+  <text x="35" y="65" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#f8fafc">1000ルーメン 高輝度 水中LEDライト (耐水圧100m)</text>
+  <text x="35" y="430" font-family="'Inter', sans-serif" font-size="11" fill="#94a3b8">DEPTH RATING: 100M / 330FT • BEAM ANGLE: 10° • DOUBLE O-RING SEAL</text>
+</svg>

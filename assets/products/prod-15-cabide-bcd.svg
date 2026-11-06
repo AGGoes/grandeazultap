@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="plasticBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="yellowHook" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#facc15"/>
+      <stop offset="100%" stop-color="#eab308"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="480" fill="url(#bgGrad)" />
+  <circle cx="300" cy="240" r="170" fill="#e0f2fe" opacity="0.6" />
+
+  <!-- Scuba BCD & Regulator Heavy Duty Hanger (Monobloc Heavy Duty) -->
+  <g transform="translate(60, 100)">
+    <!-- Swivel Top Hook (Heavy Duty Stainless Steel style) -->
+    <path d="M 240,40 C 240,0 280,0 280,30 C 280,50 250,55 240,80" stroke="#64748b" stroke-width="14" fill="none" stroke-linecap="round" />
+    <circle cx="240" cy="88" r="10" fill="#0f172a" />
+
+    <!-- Main Hanger Shoulder Frame -->
+    <path d="M 30,190 L 220,105 L 260,105 L 450,190 C 470,200 480,225 460,235 C 445,240 435,225 430,215 L 250,135 L 50,215 C 45,225 35,240 20,235 C 0,225 10,200 30,190 Z" fill="url(#plasticBody)" />
+
+    <!-- Inverted Hooks for BCD Shoulder Straps (Left & Right ends) -->
+    <!-- Left Hook -->
+    <path d="M 45,215 C 30,240 60,265 85,240 L 95,215" stroke="#0284c7" stroke-width="10" fill="none" stroke-linecap="round" />
+    <!-- Right Hook -->
+    <path d="M 435,215 C 450,240 420,265 395,240 L 385,215" stroke="#0284c7" stroke-width="10" fill="none" stroke-linecap="round" />
+
+    <!-- Central I-Beam Reinforcement Grid -->
+    <line x1="140" y1="145" x2="140" y2="185" stroke="#38bdf8" stroke-width="3" />
+    <line x1="200" y1="120" x2="200" y2="175" stroke="#38bdf8" stroke-width="3" />
+    <line x1="280" y1="120" x2="280" y2="175" stroke="#38bdf8" stroke-width="3" />
+    <line x1="340" y1="145" x2="340" y2="185" stroke="#38bdf8" stroke-width="3" />
+
+    <!-- Lower Horizontal Bar for Wetsuit or Accessories -->
+    <rect x="90" y="195" width="300" height="18" rx="4" fill="#0f172a" />
+
+    <!-- Central Threaded Attachment for 1st Stage DIN/YOKE Regulator -->
+    <g transform="translate(225, 215)">
+      <rect x="0" y="0" width="30" height="45" rx="3" fill="#f59e0b" />
+      <circle cx="15" cy="22" r="8" fill="#1e293b" />
+      <!-- Threads -->
+      <line x1="5" y1="32" x2="25" y2="32" stroke="#78350f" stroke-width="2" />
+      <line x1="5" y1="37" x2="25" y2="37" stroke="#78350f" stroke-width="2" />
+      <line x1="5" y1="42" x2="25" y2="42" stroke="#78350f" stroke-width="2" />
+    </g>
+
+    <!-- Capacity Badge on Hanger -->
+    <rect x="180" y="160" width="120" height="24" rx="3" fill="#0284c7" />
+    <text x="240" y="176" font-family="'Inter', sans-serif" font-size="10" font-weight="900" fill="white" text-anchor="middle" letter-spacing="1">MAX LOAD 50KG</text>
+  </g>
+
+  <!-- Red Hanko Seal Badge -->
+  <rect x="505" y="25" width="65" height="65" rx="4" fill="none" stroke="#dc2626" stroke-width="2" />
+  <rect x="510" y="30" width="55" height="55" rx="2" fill="none" stroke="#dc2626" stroke-width="1" />
+  <text x="537" y="52" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">高耐</text>
+  <text x="537" y="74" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">荷重</text>
+
+  <!-- Technical Spec Markers -->
+  <text x="35" y="45" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0284c7" letter-spacing="2">GA-ACS-15 • HEAVY DUTY 50KG</text>
+  <text x="35" y="65" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="bold" fill="#0f2942">高耐久 ダイビングギア専用ハンガー (BCD＆レギュレーター対応)</text>
+</svg>

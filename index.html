@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grande Azul • グランデ・アズール | Loja de Mergulho & Equipamentos Técnicos</title>
+  <meta name="description" content="E-commerce especializado em mergulho recreativo, técnico e snorkeling com atendimento consultivo online. Inspirado no rigor e estética japonesa.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+
+  <!-- Google Fonts: Noto Sans JP, Shippori Mincho & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Estilos Principais -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-seigaiha">
+
+  <!-- ==========================================================================
+       ANNOUNCEMENT TICKER (お知らせ)
+       ========================================================================== -->
+  <aside class="top-announcement-bar" aria-label="Avisos Importantes">
+    <div class="container">
+      <div class="announcement-left">
+        <span class="ticker-badge">お知らせ / AVISO</span>
+        <span>Envio seguro para todo o Brasil • Atendimento consultivo especializado online • Frete Grátis acima de R$ 399</span>
+      </div>
+      <div class="announcement-right">
+        <!-- Switcher de Gestão do TAP -->
+        <button id="tapViewToggle" class="tap-view-toggle" title="Alternar visão financeira do Termo de Abertura do Projeto">
+          <span class="toggle-switch-indicator"></span>
+          <span>Visão Gestão TAP / Nuvemshop</span>
+        </button>
+        <a href="#projeto-tap"><i class="fa-solid fa-graduation-cap"></i> Termo do Projeto (TAP)</a>
+        <a href="https://wa.me/5511999998888" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Fale com o Consultor</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       HEADER & NAVEGAÇÃO PRINCIPAL
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <!-- Logotipo Oficial da Grande Azul -->
+        <a href="#" class="brand-link" aria-label="Grande Azul Página Inicial">
+          <div class="logo-frame">
+            <img src="assets/logo.jpg" alt="Logotipo Oficial Grande Azul - Tridente com Golfinho">
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">GRANDE AZUL</span>
+            <span class="brand-jp-subtitle">グランデ・アズール • 偉大なる蒼</span>
+          </div>
+        </a>
+
+        <!-- Menu Bilíngue -->
+        <ul class="nav-menu">
+          <li>
+            <a href="#catalogo" class="nav-link active">
+              <span>Catálogo Geral</span>
+              <span class="jp-sub">装備一覧 (17 itens)</span>
+            </a>
+          </li>
+          <li>
+            <a href="#consultoria" class="nav-link">
+              <span>Guia Consultivo</span>
+              <span class="jp-sub">相談室・診断</span>
+            </a>
+          </li>
+          <li>
+            <a href="#projeto-tap" class="nav-link">
+              <span>Termo do Projeto</span>
+              <span class="jp-sub">TAP • Nuvemshop</span>
+            </a>
+          </li>
+          <li>
+            <a href="#referencias" class="nav-link">
+              <span>Referências ABNT</span>
+              <span class="jp-sub">参考文献</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Ações do Header -->
+        <div class="header-actions">
+          <a href="#consultoria" class="consult-trigger-btn">
+            <i class="fa-regular fa-compass"></i>
+            <span>Recomendador</span>
+          </a>
+
+          <button id="cartTriggerBtn" class="cart-trigger-btn" aria-label="Abrir Carrinho">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>Carrinho</span>
+            <span id="cartBadge" class="cart-badge" style="display: none;">0</span>
+          </button>
+
+          <button class="mobile-menu-toggle" aria-label="Abrir Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION JAPONESA (和風ヒーローエリア)
+       ========================================================================== -->
+  <section class="hero-section">
+    <div class="hero-bg-overlay"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Faixa Vertical Japonesa -->
+        <aside class="hero-vertical-accent">
+          <span class="hanko-seal">
+            <span>厳選</span>
+            <span>品質</span>
+          </span>
+          <div class="vertical-decor-line"></div>
+          <div class="vertical-kanji-banner">深海探求・安全第一</div>
+          <div class="vertical-decor-line"></div>
+        </aside>
+
+        <!-- Conteúdo do Hero -->
+        <div class="hero-content">
+          <div class="hero-kicker">
+            <span class="hanko-stamp">正規取扱店</span>
+            <span>Nuvemshop • E-commerce de Mergulho de Alta Performance</span>
+          </div>
+
+          <h1 class="hero-title">
+            Onde o rigor técnico encontra o <span class="highlight-azure">Grande Azul</span> das profundezas.
+          </h1>
+
+          <p class="hero-description">
+            A <strong>Grande Azul</strong> traz ao mercado brasileiro uma experiência consultiva inovadora para mergulho recreativo, técnico e snorkeling. Com portfólio de alta confiabilidade, margem média de 40% e logística descentralizada, conectamos mergulhadores de todo o Brasil aos melhores equipamentos do planeta.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#catalogo" class="btn-primary-ocean">
+              <i class="fa-solid fa-anchor"></i>
+              <span>Explorar Catálogo Técnico (17 Itens)</span>
+            </a>
+            <a href="#consultoria" class="btn-secondary-washi">
+              <i class="fa-solid fa-comments"></i>
+              <span>Consultoria de Equipamentos</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Painel Lateral de Indicadores do TAP (Negócios Eletrônicos) -->
+        <aside class="hero-tap-card">
+          <div class="tap-card-header">
+            <span class="tap-badge-title">Panorama de Mercado (TAP)</span>
+            <span class="hanko-stamp" style="border-color: #38bdf8; color: #38bdf8;">BR 2026</span>
+          </div>
+
+          <div class="tap-stat-item">
+            <div class="tap-stat-val">R$ 515 Milhões</div>
+            <div class="tap-stat-lbl">Movimentação do setor de mergulho no Brasil (Estado de Minas)</div>
+          </div>
+
+          <div class="tap-stat-item">
+            <div class="tap-stat-val">+10% ao ano</div>
+            <div class="tap-stat-lbl">Taxa média de crescimento do turismo de aventura & mergulho</div>
+          </div>
+
+          <div class="tap-stat-item">
+            <div class="tap-stat-val">40% a 51%</div>
+            <div class="tap-stat-lbl">Margem bruta média praticada garantindo suporte técnico contínuo</div>
+          </div>
+
+          <div class="tap-cert-badge">
+            <i class="fa-solid fa-shield-halved" style="color: #38bdf8; font-size: 1.1rem;"></i>
+            <span>Operação Nuvemshop estruturada em 4 categorias de alta segurança.</span>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BARRA DE CONFIANÇA & BENEFÍCIOS JAPONESES (特長・安心の理由)
+       ========================================================================== -->
+  <section class="trust-features-bar">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon-box">
+            <i class="fa-solid fa-certificate"></i>
+          </div>
+          <div class="feature-text">
+            <h4>Rigor e Qualidade <span class="jp-sub">職人品質</span></h4>
+            <p>100% dos equipamentos homologados e testados contra pressão.</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon-box">
+            <i class="fa-solid fa-user-tie"></i>
+          </div>
+          <div class="feature-text">
+            <h4>Atendimento Consultivo <span class="jp-sub">専門相談</span></h4>
+            <p>Suporte de mergulhadores credenciados para iniciantes e avançados.</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon-box">
+            <i class="fa-solid fa-plane-departure"></i>
+          </div>
+          <div class="feature-text">
+            <h4>Descentralização Brasil <span class="jp-sub">全国配送</span></h4>
+            <p>Entrega segura em áreas litorâneas e interior de todos os estados.</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon-box">
+            <i class="fa-solid fa-credit-card"></i>
+          </div>
+          <div class="feature-text">
+            <h4>10x Sem Juros ou Pix 5% <span class="jp-sub">安心決済</span></h4>
+            <p>Integração segura Nuvem Pago com parcelamento flexível.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SEÇÃO DO CATÁLOGO DE PRODUTOS (4 CATEGORIAS DO DOCUMENTO TAP)
+       ========================================================================== -->
+  <section id="catalogo" class="catalog-section">
+    <div class="container">
+      <header class="section-header">
+        <div class="section-jp-kicker">厳選されたダイビング装備</div>
+        <h2 class="section-title">Catálogo Oficial Grande Azul</h2>
+        <p class="section-description">
+          Portfólio estruturado conforme o Termo de Abertura do Projeto: 17 equipamentos de excelência com fichas técnicas, tabelas de medidas e garantia integral.
+        </p>
+      </header>
+
+      <!-- Barra de Controle: Categorias, Filtros e Busca -->
+      <div class="catalog-controls">
+        <div class="category-tabs-wrapper" id="categoryTabs">
+          <!-- Injetado dinamicamente via JS -->
+        </div>
+
+        <div class="search-sort-bar">
+          <div class="search-input-wrapper">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" class="search-input" placeholder="Buscar por cilindro, roupa 3mm, BCD, máscara, código SKU...">
+          </div>
+
+          <div class="sort-and-count">
+            <span id="productCountLabel" class="product-count-label">Exibindo 17 produtos</span>
+            <select id="sortSelect" class="sort-select" aria-label="Ordenar produtos">
+              <option value="default">Ordenação Padrão</option>
+              <option value="price-asc">Menor Preço (R$)</option>
+              <option value="price-desc">Maior Preço (R$)</option>
+              <option value="margin-desc">Maior Margem Bruta (TAP)</option>
+              <option value="name-asc">Nome do Equipamento (A-Z)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid dos 17 Produtos -->
+      <main id="productsGrid" class="products-grid" aria-label="Grade de Produtos">
+        <!-- Injetado dinamicamente via app.js -->
+      </main>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SEÇÃO GUIA CONSULTIVO & RECOMENDADOR (コンシェルジュ・診断)
+       ========================================================================== -->
+  <section id="consultoria" class="consultative-section">
+    <div class="container">
+      <div class="consultative-wrapper">
+        <div class="consultative-pattern"></div>
+        <div class="consultative-content">
+          <div class="consultative-hanko-title">
+            <span class="hanko-seal" style="border-color: #38bdf8; color: #38bdf8;">
+              <span>相談</span>
+              <span>診断</span>
+            </span>
+            <div>
+              <span style="font-size: 0.76rem; color: #93c5fd; letter-spacing: 0.15em; text-transform: uppercase;">Atendimento Consultivo Especializado</span>
+              <h2 class="consultative-title">Não sabe por onde começar? Teste nosso Recomendador</h2>
+            </div>
+          </div>
+
+          <p class="consultative-desc">
+            Conforme identificado no estudo de mercado do TAP, o público de entrada de snorkeling e mergulho recreativo valoriza a orientação personalizada. Selecione seu perfil em 3 passos para receber uma recomendação técnica feita sob medida.
+          </p>
+
+          <!-- Interactive Wizard -->
+          <div class="wizard-box">
+            <!-- Passo 1: Nível -->
+            <label class="wizard-question-label">1. Qual é a sua modalidade ou nível de experiência?</label>
+            <div class="wizard-options-grid" style="margin-bottom: 16px;">
+              <button class="wizard-option-btn" data-group="level" data-value="snorkeling">
+                <i class="fa-solid fa-water"></i> Snorkeling / Apneia
+                <span class="sub">Público de entrada</span>
+              </button>
+              <button class="wizard-option-btn" data-group="level" data-value="recreational">
+                <i class="fa-solid fa-vest"></i> Mergulho Recreativo
+                <span class="sub">Open Water / Avançado</span>
+              </button>
+              <button class="wizard-option-btn" data-group="level" data-value="advanced">
+                <i class="fa-solid fa-shield-halved"></i> Mergulho Técnico
+                <span class="sub">Profundo / Noturno</span>
+              </button>
+            </div>
+
+            <!-- Passo 2: Condição de Água -->
+            <label class="wizard-question-label">2. Em qual temperatura de água você mais mergulha?</label>
+            <div class="wizard-options-grid" style="margin-bottom: 16px;">
+              <button class="wizard-option-btn" data-group="water" data-value="warm">
+                <i class="fa-solid fa-sun"></i> Águas Quentes (>24°C)
+                <span class="sub">Nordeste / Caribe</span>
+              </button>
+              <button class="wizard-option-btn" data-group="water" data-value="moderate">
+                <i class="fa-solid fa-temperature-half"></i> Águas Temperadas (20-23°C)
+                <span class="sub">Sudeste / Arraial</span>
+              </button>
+              <button class="wizard-option-btn" data-group="water" data-value="cold">
+                <i class="fa-solid fa-snowflake"></i> Águas Frias (<20°C)
+                <span class="sub">Sul / Lagos / Inverno</span>
+              </button>
+            </div>
+
+            <!-- Passo 3: Prioridade -->
+            <label class="wizard-question-label">3. Qual é o seu foco prioritário no momento?</label>
+            <div class="wizard-options-grid">
+              <button class="wizard-option-btn" data-group="priority" data-value="essential">
+                <i class="fa-solid fa-box-open"></i> Kit Básico Essencial
+                <span class="sub">Máscara, Snorkel, Nadadeira</span>
+              </button>
+              <button class="wizard-option-btn" data-group="priority" data-value="thermal">
+                <i class="fa-solid fa-shirt"></i> Conforto Térmico & Proteção
+                <span class="sub">Roupa 3mm, Botas, Luvas</span>
+              </button>
+              <button class="wizard-option-btn" data-group="priority" data-value="safety">
+                <i class="fa-solid fa-heart-pulse"></i> Autonomia & Segurança
+                <span class="sub">Cilindro S80, BCD, Spare Air</span>
+              </button>
+            </div>
+
+            <!-- Resultado do Wizard -->
+            <div id="wizardResultBox" class="wizard-result-box">
+              <div id="wizardResultContent"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SEÇÃO INSTITUCIONAL: TERMO DE ABERTURA DO PROJETO (TAP)
+       ========================================================================== -->
+  <section id="projeto-tap" class="institutional-tap-section">
+    <div class="container">
+      <div class="tap-document-card">
+        <div class="tap-doc-header">
+          <div class="tap-doc-title-box">
+            <span class="hanko-stamp" style="border-color: #93c5fd; color: #93c5fd; margin-bottom: 8px;">TAP OFICIAL</span>
+            <h3>Termo de Abertura do Projeto (TAP)</h3>
+            <p class="tap-doc-subtitle">Implantação do E-commerce Grande Azul na Plataforma Nuvemshop • Disciplina: Negócios Eletrônicos</p>
+          </div>
+
+          <div class="tap-team-chips">
+            <span style="font-size: 0.76rem; color: #94a3b8; margin-right: 4px;">Integrantes do Projeto:</span>
+            <span class="team-chip"><i class="fa-solid fa-user"></i> Enio Bristot Júnior</span>
+            <span class="team-chip"><i class="fa-solid fa-user"></i> Gabriel Martins de Almeida</span>
+            <span class="team-chip"><i class="fa-solid fa-user"></i> Saulo Giordani Arantes Goes</span>
+          </div>
+        </div>
+
+        <div class="tap-doc-body">
+          <div class="tap-insights-grid">
+            <div class="insight-box">
+              <h4><i class="fa-solid fa-bullseye" style="color: var(--color-indigo-marine);"></i> Faturamento & Mercado</h4>
+              <p>O mercado de atividades relacionadas ao mergulho movimentou <strong>R$ 515 milhões</strong> no Brasil (2010), e o turismo de mergulho cresce a uma taxa média de <strong>10% ao ano</strong>.</p>
+            </div>
+
+            <div class="insight-box">
+              <h4><i class="fa-solid fa-compass" style="color: var(--color-indigo-marine);"></i> Oportunidade Estratégica</h4>
+              <p>Atendimento consultivo online direcionado tanto ao público de entrada (snorkeling e mergulho recreativo) quanto a praticantes experientes fora dos eixos litorâneos tradicionais.</p>
+            </div>
+
+            <div class="insight-box">
+              <h4><i class="fa-solid fa-coins" style="color: var(--color-indigo-marine);"></i> Viabilidade Financeira</h4>
+              <p>Operação apoiada em ticket médio elevado com margens brutas médias de <strong>40% a 51%</strong>, assegurando equilíbrio financeiro sustentável mesmo com baixo volume inicial.</p>
+            </div>
+          </div>
+
+          <!-- Tabela de Precificação Oficial do TAP -->
+          <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
+            <div>
+              <h4 style="font-family: var(--font-serif-jp); font-size: 1.15rem; color: var(--color-indigo-dark);">
+                Preços de Equipamentos, Acessórios e Margem Bruta
+              </h4>
+              <p style="font-size: 0.78rem; color: var(--color-sumi-muted);">Planilha oficial transcrita do documento TAP para auditoria e controle de rentabilidade.</p>
+            </div>
+            <span class="hanko-stamp">17 Produtos Parametrizados</span>
+          </div>
+
+          <div class="tap-pricing-table-container">
+            <table class="tap-pricing-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Categoria</th>
+                  <th>Produto / Especificação</th>
+                  <th>Preço Custo</th>
+                  <th>Preço Venda</th>
+                  <th>Lucro Bruto Unit.</th>
+                  <th>Margem Bruta (TAP)</th>
+                </tr>
+              </thead>
+              <tbody id="tapPricingTableBody">
+                <!-- Injetado dinamicamente via app.js com dados exatos do TAP -->
+              </tbody>
+              <tfoot id="tapPricingTableFooter">
+                <!-- Totais e médias calculadas -->
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Referências Bibliográficas (Norma ABNT NBR 6023) -->
+      <section id="referencias" class="abnt-references-card">
+        <h4><i class="fa-solid fa-book-bookmark" style="color: var(--color-indigo-marine);"></i> Referências Bibliográficas (Norma ABNT NBR 6023)</h4>
+        <ul class="abnt-list">
+          <li>
+            <strong>ASSOCIAÇÃO BRASILEIRA DAS EMPRESAS DE ECOTURISMO E TURISMO DE AVENTURA (ABETA).</strong> Perfil do Turismo de Aventura e Ecoturismo no Brasil. São Paulo: ABETA, 2023. Disponível em: <a href="https://abeta.tur.br" target="_blank" rel="noopener">https://abeta.tur.br</a>. Acesso em: 26 set. 2026.
+          </li>
+          <li>
+            <strong>ATIVIDADES relacionadas ao mergulho movimentam R$ 515 mi em 2010.</strong> Estado de Minas, Economia, 20 mar. 2011. Disponível em: <a href="https://www.em.com.br/app/noticia/economia/2011/03/20/internas_economia,216354/atividades-relacionadas-ao-mergulho-movimentam-r-515-mi-em-2010.shtml" target="_blank" rel="noopener">https://www.em.com.br</a>. Acesso em: 25 set. 2026.
+          </li>
+          <li>
+            <strong>BRASIL. Ministério do Turismo.</strong> Turismo de Aventura no Brasil: diagnósticos, tendências e dados do segmento náutico. Brasília, DF: MTur, 2024. Disponível em: <a href="https://www.gov.br/turismo" target="_blank" rel="noopener">https://www.gov.br/turismo</a>. Acesso em: 26 set. 2026.
+          </li>
+          <li>
+            <strong>NARWHAL.</strong> Home page. São Paulo, [s.d.]. Líder nacional reconhecida no segmento de ensino e equipamentos de mergulho. Disponível em: <a href="https://narwhal.com.br/" target="_blank" rel="noopener">https://narwhal.com.br/</a>. Acesso em: 25 set. 2026.
+          </li>
+          <li>
+            <strong>NUVEMSHOP.</strong> Relatório NuvemCommerce: Panorama do E-commerce PME no Brasil. São Paulo: Nuvemshop, 2024. Disponível em: <a href="https://www.nuvemshop.com.br" target="_blank" rel="noopener">https://www.nuvemshop.com.br</a>. Acesso em: 26 set. 2026.
+          </li>
+          <li>
+            <strong>TURISMO de mergulho: crescimento até 2030.</strong> Brasilturis, 6 jan. 2026. Disponível em: <a href="https://brasilturis.com.br/2026/01/06/turismo-de-mergulho-crescimento-2030/" target="_blank" rel="noopener">https://brasilturis.com.br</a>. Acesso em: 25 set. 2026.
+          </li>
+        </ul>
+      </section>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       RODAPÉ (JAPANESE CRAFTSMANSHIP / 伝統と革新)
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <div class="footer-logo-row">
+            <div class="footer-logo-frame">
+              <img src="assets/logo.jpg" alt="Grande Azul">
+            </div>
+            <div>
+              <div class="footer-brand-title">GRANDE AZUL</div>
+              <div style="font-family: var(--font-jp); font-size: 0.72rem; color: #93c5fd;">グランデ・アズール • 偉大なる蒼</div>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            A união entre a paixão pelo mar brasileiro e a precisão do design japonês. Equipamentos homologados para mergulho autônomo, snorkeling e ecoturismo submarino com consultoria técnica contínua.
+          </p>
+          <div style="display: flex; gap: 8px; margin-top: 4px;">
+            <span class="hanko-stamp" style="border-color: #60a5fa; color: #60a5fa;">Nuvemshop 2026</span>
+            <span class="hanko-stamp" style="border-color: #4ade80; color: #4ade80;">100% Homologado</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Categorias <span class="jp-sub">カテゴリー</span></h4>
+          <ul class="footer-links-list">
+            <li><a href="#catalogo">Equipamentos Principais</a></li>
+            <li><a href="#catalogo">Vestuário e Proteção</a></li>
+            <li><a href="#catalogo">Acessórios e Eletrônicos</a></li>
+            <li><a href="#catalogo">Acessórios e Manutenção</a></li>
+            <li><a href="#consultoria">Kit Snorkeling Iniciante</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Institucional <span class="jp-sub">情報・規約</span></h4>
+          <ul class="footer-links-list">
+            <li><a href="#projeto-tap">Termo de Abertura (TAP)</a></li>
+            <li><a href="#projeto-tap">Integrantes & Autores</a></li>
+            <li><a href="#projeto-tap">Margens e Viabilidade</a></li>
+            <li><a href="#referencias">Normas ABNT NBR 6023</a></li>
+            <li><a href="https://wa.me/5511999998888" target="_blank">Canal Consultivo WhatsApp</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Newsletter do Mergulhador <span class="jp-sub">最新情報</span></h4>
+          <p class="footer-newsletter-text">
+            Receba expedientes de expedições submarinas, novidades de equipamentos e ofertas exclusivas:
+          </p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Obrigado! Inscrição confirmada na newsletter Grande Azul.'); this.reset();">
+            <input type="email" class="newsletter-input" placeholder="Seu e-mail..." required>
+            <button type="submit" class="newsletter-btn">Assinar</button>
+          </form>
+          <div style="margin-top: 14px; font-size: 0.72rem; color: #64748b;">
+            <i class="fa-solid fa-lock"></i> Seus dados protegidos conforme a LGPD.
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          © 2026 Grande Azul Comércio de Equipamentos de Mergulho Ltda. • Projeto de Negócios Eletrônicos.
+        </div>
+        <div style="display: flex; gap: 16px; align-items: center;">
+          <span>Desenvolvido por Enio Bristot Jr., Gabriel M. de Almeida e Saulo G. A. Goes</span>
+          <span>•</span>
+          <span style="font-family: var(--font-jp);">深海探求 • 信頼と安全</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       DRAWER DO CARRINHO (CART DRAWER NUVEMSHOP)
+       ========================================================================== -->
+  <div id="cartDrawerOverlay" class="cart-drawer-overlay"></div>
+  <aside id="cartDrawer" class="cart-drawer" aria-label="Carrinho de Compras">
+    <div class="cart-header">
+      <div class="cart-header-title">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <h3>Seu Carrinho de Compras</h3>
+      </div>
+      <button id="cartCloseBtn" class="cart-close-btn" aria-label="Fechar Carrinho">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Barra de Progresso de Frete Grátis -->
+    <div class="free-shipping-progress-box">
+      <div id="cartShippingBarText">Faltam R$ 399,00 para <strong>Frete Grátis</strong> em compras para todo o Brasil!</div>
+      <div class="progress-bar-bg">
+        <div id="cartShippingBarFill" class="progress-bar-fill"></div>
+      </div>
+    </div>
+
+    <!-- Lista de Itens -->
+    <div id="cartItemsContainer" class="cart-items-container">
+      <!-- Injetado dinamicamente via app.js -->
+    </div>
+
+    <!-- Rodapé com Simulador de Frete e Checkout -->
+    <div class="cart-footer">
+      <!-- Simulador de CEP -->
+      <div class="shipping-calc-box">
+        <input type="text" id="shippingCepInput" class="shipping-cep-input" placeholder="Calcular Frete (CEP: 00000-000)" maxlength="9">
+        <button id="shippingCalcBtn" class="shipping-calc-btn">Calcular</button>
+      </div>
+      <div id="shippingResultRow" class="shipping-result-row"></div>
+
+      <!-- Cupom de Desconto -->
+      <div style="display: flex; gap: 8px; margin-bottom: 14px;">
+        <input type="text" id="couponInput" class="shipping-cep-input" placeholder="Cupom (ex: GRANDEAZUL10)">
+        <button id="applyCouponBtn" class="shipping-calc-btn">Aplicar</button>
+      </div>
+
+      <!-- Totais -->
+      <div class="cart-totals-breakdown">
+        <div class="total-row">
+          <span>Subtotal:</span>
+          <span id="cartSubtotal">R$ 0,00</span>
+        </div>
+        <div class="total-row">
+          <span>Desconto Cupom:</span>
+          <span id="cartDiscount" style="color: #16a34a;">R$ 0,00</span>
+        </div>
+        <div class="total-row">
+          <span>Frete Brasil:</span>
+          <span id="cartShipping">R$ 0,00</span>
+        </div>
+        <div class="total-row final-total">
+          <span>Total do Pedido:</span>
+          <span id="cartTotal">R$ 0,00</span>
+        </div>
+      </div>
+
+      <button id="checkoutOrderBtn" class="btn-checkout-order">
+        <i class="fa-solid fa-lock"></i>
+        <span>Finalizar Pedido Nuvemshop</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       MODAL DE DETALHES TÉCNICOS & TABELA DE MEDIDAS (仕様・サイズ表)
+       ========================================================================== -->
+  <div id="productModalBackdrop" class="product-modal-backdrop">
+    <div class="product-modal-content">
+      <button id="modalCloseBtn" class="modal-close-btn" aria-label="Fechar Modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-scrollable-body">
+        <div class="modal-hero-split">
+          <div class="modal-img-col">
+            <img id="modalProductImage" src="" alt="Produto Grande Azul">
+          </div>
+
+          <div class="modal-info-col">
+            <div id="modalJpSubtitle" class="modal-jp-subtitle"></div>
+            <h2 id="modalProductTitle" class="modal-product-title"></h2>
+            <div id="modalProductSku" style="font-size: 0.74rem; color: var(--color-sumi-muted); margin-bottom: 14px;"></div>
+
+            <div class="modal-price-box">
+              <div id="modalProductPrice" class="modal-price-val"></div>
+              <div id="modalProductInstallments" style="font-size: 0.8rem; color: var(--color-sumi-light);"></div>
+            </div>
+
+            <p id="modalProductDesc" style="font-size: 0.88rem; color: var(--color-sumi-light); line-height: 1.6; margin-bottom: 20px;"></p>
+
+            <div style="display: flex; gap: 12px; align-items: center; margin-top: auto; flex-wrap: wrap;">
+              <div style="display: flex; align-items: center; border: 1px solid var(--color-border); border-radius: var(--radius-sm); overflow: hidden;">
+                <label style="padding: 0 10px; font-size: 0.78rem; color: var(--color-sumi-muted);">Qtd:</label>
+                <input type="number" id="modalQtyInput" value="1" min="1" max="99" style="width: 50px; padding: 10px 4px; border: none; font-weight: 700; outline: none; text-align: center;">
+              </div>
+
+              <button id="modalAddToCartBtn" class="btn-primary-ocean" style="flex: 1; justify-content: center;">
+                <i class="fa-solid fa-cart-plus"></i> Adicionar ao Carrinho
+              </button>
+            </div>
+
+            <div style="margin-top: 14px; display: flex; align-items: center; gap: 8px;">
+              <a id="modalWhatsappConsultBtn" href="#" target="_blank" rel="noopener" style="font-size: 0.8rem; color: #15803d; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
+                <i class="fa-brands fa-whatsapp" style="font-size: 1.1rem;"></i> Dúvidas técnicas sobre este item? Fale com nosso consultor
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Abas de Especificações Técnicas e Medidas -->
+        <div class="modal-tabs-nav">
+          <button class="modal-tab-btn active" data-tab="specs">
+            <i class="fa-solid fa-list-check"></i> Ficha Técnica
+          </button>
+          <button id="modalSizeChartTabBtn" class="modal-tab-btn" data-tab="sizechart">
+            <i class="fa-solid fa-ruler-combined"></i> Tabela de Medidas
+          </button>
+          <button class="modal-tab-btn" data-tab="maintenance">
+            <i class="fa-solid fa-shield-heart"></i> Manutenção & Cuidados
+          </button>
+        </div>
+
+        <!-- Painel Especificações -->
+        <div id="modalTabPanel-specs" class="modal-tab-panel active">
+          <table class="specs-table">
+            <tbody id="modalSpecsContainer">
+              <!-- Injetado dinamicamente -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Painel Tabela de Medidas -->
+        <div id="modalTabPanel-sizechart" class="modal-tab-panel">
+          <div id="modalSizeChartPanel">
+            <!-- Injetado dinamicamente quando o produto tiver medidas (Neoprene, Colete BCD, Nadadeiras, Botas, Luvas) -->
+          </div>
+        </div>
+
+        <!-- Painel Cuidados -->
+        <div id="modalTabPanel-maintenance" class="modal-tab-panel">
+          <div style="background: #f8fafc; border-left: 3px solid #0284c7; padding: 16px; border-radius: var(--radius-sm); font-size: 0.86rem; line-height: 1.6;">
+            <h4 style="font-size: 0.92rem; color: var(--color-indigo-dark); margin-bottom: 6px;">
+              <i class="fa-solid fa-circle-info" style="color: #0284c7;"></i> Recomendações dos Nossos Especialistas:
+            </h4>
+            <p id="modalMaintenanceText"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL DE FINALIZAÇÃO DE PEDIDO (NUVEMSHOP CHECKOUT SIMULATOR)
+       ========================================================================== -->
+  <div id="checkoutModalBackdrop" class="product-modal-backdrop">
+    <div class="product-modal-content checkout-modal-card">
+      <button id="checkoutModalCloseBtn" class="modal-close-btn" aria-label="Fechar Checkout">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="checkout-success-icon">
+        <i class="fa-solid fa-bag-shopping"></i>
+      </div>
+
+      <h3 style="font-family: var(--font-serif-jp); font-size: 1.5rem; color: var(--color-indigo-dark); margin-bottom: 8px;">
+        Finalização de Pedido • Nuvemshop
+      </h3>
+      <p style="font-size: 0.84rem; color: var(--color-sumi-light); margin-bottom: 20px;">
+        Revise seu pedido da <strong>Grande Azul</strong> e escolha seu canal de finalização consultivo ou automático via Nuvem Pago.
+      </p>
+
+      <div id="checkoutItemsSummary" style="background: #f8fafc; border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: 14px; max-height: 180px; overflow-y: auto; text-align: left; margin-bottom: 16px;">
+        <!-- Injetado via JS -->
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; font-weight: 800; color: var(--color-indigo-dark); margin-bottom: 24px; padding: 0 4px;">
+        <span>Total com Frete:</span>
+        <span id="checkoutTotalVal" style="color: #0369a1;">R$ 0,00</span>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <button id="confirmWhatsappOrderBtn" class="btn-primary-ocean" style="background: #16a34a; justify-content: center; font-size: 0.95rem;">
+          <i class="fa-brands fa-whatsapp"></i> Finalizar com Consultor via WhatsApp (Atendimento Personalizado)
+        </button>
+
+        <button onclick="alert('Simulação de Pagamento Nuvem Pago Concluída! O pedido foi registrado com sucesso.'); location.reload();" class="btn-secondary-washi" style="color: var(--color-indigo-dark); border-color: var(--color-border); justify-content: center;">
+          <i class="fa-solid fa-credit-card"></i> Pagar via Cartão / Pix Direto (Nuvem Pago)
+        </button>
+      </div>
+
+      <div style="margin-top: 18px; font-size: 0.74rem; color: var(--color-sumi-muted);">
+        <i class="fa-solid fa-shield"></i> Ambiente Seguro com Certificado SSL de 256 bits • Garantia Grande Azul
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       BOTÃO FLUTUANTE DE ATENDIMENTO CONSULTIVO (WHATSAPP CONCIERGE)
+       ========================================================================== -->
+  <a href="https://wa.me/5511999998888?text=Ol%C3%A1%2C%20Grande%20Azul!%20Gostaria%20de%20um%20atendimento%20consultivo%20para%20escolha%20de%20equipamentos%20de%20mergulho." 
+     target="_blank" 
+     rel="noopener" 
+     class="floating-consultant-btn" 
+     title="Fale com nosso consultor especialista em mergulho">
+    <span class="online-pulse-dot"></span>
+    <i class="fa-brands fa-whatsapp" style="font-size: 1.25rem;"></i>
+    <span>Consultor Online</span>
+  </a>
+
+  <!-- Toast Notification Flutuante -->
+  <div id="toastNotification" class="toast-notification"></div>
+
+  <!-- Scripts -->
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
